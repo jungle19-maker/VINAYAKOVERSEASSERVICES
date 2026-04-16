@@ -1811,16 +1811,15 @@ input, select, textarea { font-family: inherit; }
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 60px;
-  align-items: start;
+  display: block;
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact-info-item {
@@ -1862,9 +1861,11 @@ input, select, textarea { font-family: inherit; }
 .contact-detail a:hover { color: var(--navy-mid); }
 
 .contact-social {
+  grid-column: 1 / -1;
   display: flex;
-  gap: 10px;
-  margin-top: 4px;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .social-btn {
@@ -2392,7 +2393,7 @@ input, select, textarea { font-family: inherit; }
   .faq-grid { grid-template-columns: 1fr; gap: 48px; }
   .faq-left p { max-width: 100%; }
 
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  /* .contact-grid no longer uses grid */
 
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
