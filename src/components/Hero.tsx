@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Briefcase, UserCheck, ShieldCheck, Globe, CheckCircle } from "lucide-react";
+import { ArrowRight, Briefcase, UserCheck, ShieldCheck, Globe, CheckCircle, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const trustBadges = [
   { icon: <ShieldCheck className="w-4 h-4" />, text: "MEA Registered" },
@@ -55,31 +55,20 @@ export default function Hero() {
             <span className="text-white"> &<br />Overseas Hiring Solutions</span>
           </h1>
 
-          {/* Subtext */}
-          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-            Connecting Skilled Indian Talent with Trusted International Employers
-            across Gulf, Middle East, Asia & Europe.
-          </p>
+          
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up delay-300">
             <a
-              href="#contact"
+              href="#aboutus"
               id="hero-hire-talent"
               className="btn-primary text-base px-8 py-4"
             >
               <Briefcase className="w-5 h-5" />
-              Hire Talent
+              Explore more
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a
-              href="#contact"
-              id="hero-apply-jobs"
-              className="btn-secondary text-base px-8 py-4"
-            >
-              <UserCheck className="w-5 h-5" />
-              Apply for Jobs
-            </a>
+            
           </div>
 
           {/* Trust Badges */}
@@ -96,17 +85,45 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-white/40 text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-0.5 h-8 bg-gradient-to-b from-[#F5B301]/80 to-transparent rounded-full" />
+        {/* ── Social Icons Sidebar ── */}
+        <div className="absolute right-0 top-[45%] -translate-y-1/2 flex flex-col z-50">
+          <a 
+            href="https://facebook.com" 
+            target="_blank" rel="noreferrer"
+            className="w-10 h-10 md:w-12 md:h-12 bg-[#1877F2] flex items-center justify-center text-white rounded-l-lg hover:-translate-x-1 transition-transform mb-[2px]"
+          >
+            <Facebook className="w-5 h-5 md:w-6 md:h-6 fill-current stroke-none" />
+          </a>
+          <a 
+            href="https://twitter.com" 
+            target="_blank" rel="noreferrer"
+            className="w-10 h-10 md:w-12 md:h-12 bg-[#1DA1F2] flex items-center justify-center text-white rounded-l-lg hover:-translate-x-1 transition-transform mb-[2px]"
+          >
+            <Twitter className="w-5 h-5 md:w-6 md:h-6 fill-current stroke-none" />
+          </a>
+          <a 
+            href="https://instagram.com" 
+            target="_blank" rel="noreferrer"
+            className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] flex items-center justify-center text-white rounded-l-lg hover:-translate-x-1 transition-transform mb-[2px]"
+          >
+            <Instagram className="w-5 h-5 md:w-6 md:h-6" />
+          </a>
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" rel="noreferrer"
+            className="w-10 h-10 md:w-12 md:h-12 bg-[#0A66C2] flex items-center justify-center text-white rounded-l-lg hover:-translate-x-1 transition-transform"
+          >
+            <Linkedin className="w-5 h-5 md:w-6 md:h-6 fill-current stroke-none" />
+          </a>
         </div>
+
+        
       </section>
 
       {/* ── STATS BAR ── */}
       <div
         id="stats"
-        className="bg-[#23352b] py-10 border-t-2 border-[#F5B301]/30"
+        className="bg-white py-10 border-t border-[#E5E7EB]"
       >
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -115,7 +132,7 @@ export default function Hero() {
                 <div className="text-4xl md:text-5xl font-extrabold text-[#F5B301] mb-2 group-hover:scale-110 transition-transform duration-300">
                   {s.value}
                 </div>
-                <div className="text-xs font-bold text-white/50 tracking-[0.2em] uppercase">
+                <div className="text-xs font-bold text-[#0B1F3A]/60 tracking-[0.2em] uppercase">
                   {s.label}
                 </div>
               </div>

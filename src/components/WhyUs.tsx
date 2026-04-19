@@ -1,114 +1,224 @@
+import Image from "next/image";
 import {
+  Users,
   ShieldCheck,
-  Eye,
-  Database,
-  Network,
-  Zap,
-  LifeBuoy,
+  FileCheck,
+  Clock,
+  Headset,
+  Award,
+  CheckCircle2,
+  Globe,
+  MapPin,
+  TrendingUp,
 } from "lucide-react";
 
-const features = [
+const whyUsFeatures = [
   {
-    icon: <ShieldCheck className="w-7 h-7" />,
-    title: "MEA Approved Recruitment",
-    desc: "Govt. of India Ministry of External Affairs licensed agency — RA License No: B-3393/HP/PER/100/5/11399/2026.",
-    highlight: true,
+    icon: <Users className="w-6 h-6 text-[#F5B301]" />,
+    title: "Pan-India Talent Pool",
+    desc: "Access a vast network of candidates from metro cities like Mumbai, Delhi, Bangalore, as well as tier-2 and tier-3 regions, ensuring quality talent at competitive salary expectations.",
   },
   {
-    icon: <Eye className="w-7 h-7" />,
-    title: "Transparent Process",
-    desc: "No hidden fees, no false promises. Every step is documented and communicated clearly to employers and candidates.",
-    highlight: false,
+    icon: <ShieldCheck className="w-6 h-6 text-[#F5B301]" />,
+    title: "Stringent Screening Process",
+    desc: "Multi-level candidate evaluation including skill assessments, background verification, medical checks, and video interviews to ensure only qualified professionals are selected.",
   },
   {
-    icon: <Database className="w-7 h-7" />,
-    title: "Skilled Workforce Database",
-    desc: "Access to a pre-screened talent pool of 50,000+ verified candidates across 15+ industries and all skill levels.",
-    highlight: false,
+    icon: <FileCheck className="w-6 h-6 text-[#F5B301]" />,
+    title: "Visa & Compliance Expertise",
+    desc: "Dedicated in-house team handling passport processing, document attestation, visa approvals, and emigration clearance (ECR/ECNR).",
   },
   {
-    icon: <Network className="w-7 h-7" />,
-    title: "Global Client Network",
-    desc: "Trusted by 500+ employers across Gulf, Middle East, Asia and Europe for consistent, high-quality manpower.",
-    highlight: false,
+    icon: <Clock className="w-6 h-6 text-[#F5B301]" />,
+    title: "Fast Turnaround Time",
+    desc: "Receive shortlisted candidates within 48–72 hours and complete deployment within 30–45 days.",
   },
   {
-    icon: <Zap className="w-7 h-7" />,
-    title: "Fast Deployment",
-    desc: "Shortlisting in 48–72 hours. Full deployment cycle completed in 30–45 days from requirement receipt.",
-    highlight: false,
+    icon: <Headset className="w-6 h-6 text-[#F5B301]" />,
+    title: "Post-Deployment Support",
+    desc: "We provide onboarding assistance, grievance handling, and continuous follow-up during the probation period to ensure smooth workforce integration.",
   },
   {
-    icon: <LifeBuoy className="w-7 h-7" />,
-    title: "End-to-End Support",
-    desc: "From recruitement to post-deployment — we handle visa, attestation, onboarding, and ongoing support.",
-    highlight: false,
+    icon: <Award className="w-6 h-6 text-[#F5B301]" />,
+    title: "Certifications & Compliance",
+    desc: "Registered with the Ministry of External Affairs (India). License No: B-3393/HP/PER/100/5/11399/2026.",
   },
+];
+
+const promiseItems = [
+  "100% Documented Recruitment",
+  "Zero Candidate Substitution",
+  "Transparent Pricing Structure",
+  "Long-Term After-Sales Support",
 ];
 
 export default function WhyUs() {
   return (
-    <section id="whyus" className="py-24 bg-[#F1F5F9]">
-      <div className="container mx-auto px-6 max-w-7xl">
-
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="h-[2px] w-8 bg-[#F5B301] rounded-full" />
-            <span className="text-xs font-bold text-[#23352b]/50 uppercase tracking-wider">
-              Why Partner With Us?
-            </span>
-            <span className="h-[2px] w-8 bg-[#F5B301] rounded-full" />
+    <>
+      {/* ── Section 1: Why Partner With Us ── */}
+      <section id="whyus" className="py-24 bg-[#F8FAFC]">
+        <div className="container mx-auto px-6 max-w-[85rem]">
+          
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="h-[2px] w-8 bg-[#F5B301] rounded-full" />
+              <span className="text-xs font-bold text-[#0B1F3A]/60 tracking-[0.2em] uppercase">
+                Why Choose Us
+              </span>
+              <span className="h-[2px] w-8 bg-[#F5B301] rounded-full" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B1F3A] mb-6 leading-tight">
+              Why Partner With Vinayak Overseas Services?
+            </h2>
+            <p className="text-[#4B5563] text-lg max-w-2xl mx-auto leading-relaxed">
+              We deliver reliable, compliant, and efficient global manpower solutions tailored to your business needs.
+            </p>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#23352b] mb-4">
-            Discover Why Employers Choose Us.
-          </h2>
-          <p className="text-[#4B5563] text-base leading-relaxed">
-            Six compelling reasons why global employers trust Vinayak Overseas Services
-            for their critical manpower needs.
-          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            {/* Features (Left/Main Grid) */}
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {whyUsFeatures.map((feat, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-8 rounded-2xl shadow-sm border border-[#E5E7EB] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1F3A] flex items-center justify-center mb-6">
+                    {feat.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0B1F3A] mb-3">
+                    {feat.title}
+                  </h3>
+                  <p className="text-[#4B5563] text-sm leading-relaxed">
+                    {feat.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Promise Box (Right Sidebar) */}
+            <div className="lg:col-span-4 sticky top-32">
+              <div className="bg-[#0B1F3A] rounded-2xl p-8 lg:p-10 shadow-2xl relative overflow-hidden">
+                {/* Decorative Elements */}
+                <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#F5B301] opacity-10 rounded-full blur-2xl"></div>
+                <div className="absolute bottom-0 right-0 w-1 h-full bg-[#F5B301]" />
+                
+                <h3 className="text-2xl font-bold text-white mb-8 border-b border-white/20 pb-4">
+                  Our Commitment <span className="text-[#F5B301]">to Excellence</span>
+                </h3>
+                
+                <ul className="space-y-6">
+                  {promiseItems.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-4">
+                      <CheckCircle2 className="w-6 h-6 text-[#F5B301] flex-shrink-0 mt-0.5" />
+                      <span className="text-white/90 font-medium leading-relaxed">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feat, idx) => (
-            <div
-              key={idx}
-              className={`group relative p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl overflow-hidden ${feat.highlight
-                  ? "bg-[#23352b] border-[#F5B301]/30 text-white"
-                  : "bg-white border-[#E5E7EB] hover:border-[#23352b]/20"
-                }`}
-            >
-              {/* Gold corner accent for highlighted card */}
-              {feat.highlight && (
-                <div className="absolute top-0 right-0 w-16 h-16 bg-[#F5B301]/10 rounded-bl-[40px]" />
-              )}
+      {/* ── Section 2: Consultant Profile ── */}
+      <section id="leadership" className="py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-[85rem]">
+          
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            
+            {/* Left: Professional Portrait */}
+            <div className="lg:w-5/12 w-full relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative z-10 aspect-[4/5] border border-[#E5E7EB]">
+                <Image
+                  src="/images/sanjeev_kumar.png"
+                  alt="Professional visa consultant India"
+                  fill
+                  className="object-cover"
+                />
+                
+                {/* Name Overlay Flag */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0B1F3A] via-[#0B1F3A]/80 to-transparent p-8 pt-16">
+                  <h3 className="text-3xl font-extrabold text-white mb-1">Sanjeev Kumar</h3>
+                  <p className="text-[#F5B301] font-semibold text-sm tracking-widest uppercase">
+                    Visa & Immigration Consultant
+                  </p>
+                </div>
+              </div>
+              
+              {/* Decorative Offset Block */}
+              <div className="absolute top-6 -left-6 w-full h-full border-2 border-[#0B1F3A] rounded-2xl -z-10 bg-[#F1F5F9]/50"></div>
+            </div>
 
-              {/* Icon */}
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 ${feat.highlight
-                    ? "bg-[#F5B301]/15 text-[#F5B301]"
-                    : "bg-[#F1F5F9] text-[#23352b] group-hover:bg-[#23352b] group-hover:text-[#F5B301]"
-                  }`}
-              >
-                {feat.icon}
+            {/* Right: Profile Content */}
+            <div className="lg:w-7/12 space-y-8">
+              <div className="flex items-center gap-3">
+                <span className="h-[2px] w-8 bg-[#F5B301] rounded-full" />
+                <span className="text-xs font-bold text-[#0B1F3A]/60 tracking-[0.2em] uppercase">
+                  Leadership Profile
+                </span>
               </div>
 
-              <h4
-                className={`text-lg font-bold mb-2 ${feat.highlight ? "text-white" : "text-[#23352b]"
-                  }`}
-              >
-                {feat.title}
-              </h4>
-              <p
-                className={`text-sm leading-relaxed ${feat.highlight ? "text-white/65" : "text-[#4B5563]"
-                  }`}
-              >
-                {feat.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#0B1F3A] leading-tight">
+                About Sanjeev Kumar <br/>
+                <span className="text-[#F5B301]">Visa & Immigration Consultant</span>
+              </h2>
 
-      </div>
-    </section>
+              <p className="text-[#4B5563] text-lg leading-relaxed">
+                Sanjeev Kumar is a highly experienced visa and immigration consultant based in Una, Himachal Pradesh, with over 12 years of expertise in international visa processing and documentation.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#E5E7EB]">
+                  <Globe className="w-8 h-8 text-[#0B1F3A] mb-4" />
+                  <h3 className="font-bold text-[#0B1F3A] mb-2 text-lg">Areas of Specialization</h3>
+                  <ul className="text-sm text-[#4B5563] space-y-2">
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-[#F5B301] mt-0.5 flex-shrink-0" />
+                      <span><strong>Arab Countries:</strong> UAE (Dubai), Saudi Arabia, Qatar, Oman, Bahrain, Kuwait</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-[#F5B301] mt-0.5 flex-shrink-0" />
+                      <span><strong>European Countries:</strong> Schengen visa and EU destinations</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#E5E7EB]">
+                  <CheckCircle2 className="w-8 h-8 text-[#0B1F3A] mb-4" />
+                  <h3 className="font-bold text-[#0B1F3A] mb-2 text-lg">Expertise & Approach</h3>
+                  <p className="text-sm text-[#4B5563] leading-relaxed">
+                    Known for his detail-oriented approach, Sanjeev ensures every application meets strict embassy and immigration requirements. His expertise significantly reduces visa rejection rates and delays.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#0B1F3A] text-white p-8 rounded-xl relative overflow-hidden mt-6 shadow-lg">
+                <TrendingUp className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-12" />
+                <h3 className="text-[#F5B301] font-bold mb-2 flex items-center gap-2 text-lg">
+                  Professional Philosophy
+                </h3>
+                <blockquote className="text-lg md:text-xl font-medium leading-relaxed italic border-l-4 border-[#F5B301] pl-4 mb-6">
+                  "Accuracy, transparency, and preparation are the pillars of successful visa processing."
+                </blockquote>
+
+                <h3 className="text-[#F5B301] font-bold mb-2 flex items-center gap-2 text-lg">
+                  Vision
+                </h3>
+                <p className="text-white/80 leading-relaxed text-sm md:text-base pr-8 relative z-10">
+                  Sanjeev aims to expand his services globally, helping individuals and organizations achieve seamless immigration and workforce mobility.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 }
