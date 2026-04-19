@@ -4,7 +4,7 @@ import ServicesComponent from "@/components/Services";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Our Services | Vinayak Overseas Services',
+  title: 'Our Services | VCS Website',
   description: 'Explore our comprehensive overseas recruitment services, from candidate screening and visa processing to bulk hiring and deployment support.',
 };
 

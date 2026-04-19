@@ -68,7 +68,7 @@ export default function WhyUs() {
  <span className="h-[2px] w-8 bg-[#F5B301] " />
  </div>
  <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B1F3A] mb-6 leading-tight">
- Why Partner With Vinayak Overseas Services?
+ Why Partner With VCS Website?
  </h2>
  <p className="text-[#4B5563] text-lg max-w-2xl mx-auto leading-relaxed">
  We deliver reliable, compliant, and efficient global manpower solutions tailored to your business needs.
@@ -203,7 +203,7 @@ export default function WhyUs() {
  Professional Philosophy
  </h3>
  <blockquote className="text-lg md:text-xl font-medium leading-relaxed italic border-l-4 border-[#F5B301] pl-4 mb-6">
- "Accuracy, transparency, and preparation are the pillars of successful visa processing."
+ &quot;Accuracy, transparency, and preparation are the pillars of successful visa processing.&quot;
  </blockquote>
 
  <h3 className="text-[#F5B301] font-bold mb-2 flex items-center gap-2 text-lg">

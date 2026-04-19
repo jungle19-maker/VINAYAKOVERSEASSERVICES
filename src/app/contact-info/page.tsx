@@ -4,8 +4,8 @@ import ContactComponent from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Vinayak Overseas Services',
-  description: 'Get in touch with Vinayak Overseas Services. We are ready to assist you with your international manpower recruitment and job placement needs.',
+  title: 'Contact Us | VCS Website',
+  description: 'Get in touch with VCS Website. We are ready to assist you with your international manpower recruitment and job placement needs.',
 };
 
 export default function ContactInfoPage() {

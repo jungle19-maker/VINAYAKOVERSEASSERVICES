@@ -58,7 +58,7 @@ export default function Services() {
  "serviceType": svc.category,
  "provider": {
  "@type": "Organization",
- "name": "Vinayak Overseas Services"
+ "name": "VCS Website"
  }
  }
  }))

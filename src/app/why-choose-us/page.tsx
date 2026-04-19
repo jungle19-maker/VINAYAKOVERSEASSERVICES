@@ -4,8 +4,8 @@ import WhyUs from "@/components/WhyUs";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Why Choose Us | Vinayak Overseas Services',
-  description: 'Discover why Vinayak Overseas Services is your trusted MEA-approved global manpower recruitment partner.',
+  title: 'Why Choose Us | VCS Website',
+  description: 'Discover why VCS Website is your trusted MEA-approved global manpower recruitment partner.',
 };
 
 export default function WhyChooseUsPage() {

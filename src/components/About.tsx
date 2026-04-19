@@ -70,7 +70,7 @@ export default function About({ showCertificate = true }: { showCertificate?: bo
             </h2>
 
             <p className="text-[#4B5563] leading-relaxed text-lg">
-              Vinayak Overseas Services is a trusted international recruitment partner, delivering
+              VCS Website is a trusted international recruitment partner, delivering
               skilled manpower solutions across industries including construction, oil & gas,
               healthcare, hospitality, and manufacturing. With a strong compliance framework
               aligned with Government of India regulations, we ensure{" "}
@@ -114,7 +114,7 @@ export default function About({ showCertificate = true }: { showCertificate?: bo
                   Official <span className="text-[#F5B301]">License</span>
                 </h3>
                 <p className="text-[#4B5563] text-sm leading-relaxed mb-6">
-                  Vinayak Overseas Services is an officially certified recruiting agent by the Ministry of External Affairs, Government of India.
+                  VCS Website is an officially certified recruiting agent by the Ministry of External Affairs, Government of India.
                 </p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F1F5F9] border border-[#E5E7EB]">
                   <Award className="w-5 h-5 text-[#F5B301]" />

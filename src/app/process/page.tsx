@@ -4,7 +4,7 @@ import ProcessComponent from "@/components/Process";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Our Process | Vinayak Overseas Services',
+  title: 'Our Process | VCS Website',
   description: 'Understand our 6-step global recruitment process that ensures right talent matching from requirement analysis to final deployment.',
 };
 

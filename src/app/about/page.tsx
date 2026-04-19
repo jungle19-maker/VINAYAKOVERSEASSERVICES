@@ -4,8 +4,8 @@ import AboutComponent from "@/components/About";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
- title: 'About Us | Vinayak Overseas Services',
- description: 'Learn about Vinayak Overseas Services, our mission, vision, and our commitment to providing top-tier overseas manpower recruitment.',
+ title: 'About Us | VCS Website',
+ description: 'Learn about VCS Website, our mission, vision, and our commitment to providing top-tier overseas manpower recruitment.',
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
  {/* Hero Banner for About Page */}
  <section className="bg-white py-20 text-center border-b border-[#E5E7EB]">
  <div className="container mx-auto px-6 max-w-4xl">
- <h1 className="text-4xl md:text-5xl font-extrabold text-[#0B1F3A] mb-4">About <span className="text-[#F5B301]">Vinayak Overseas Services</span></h1>
+ <h1 className="text-4xl md:text-5xl font-extrabold text-[#0B1F3A] mb-4">About <span className="text-[#F5B301]">VCS Website</span></h1>
  <p className="text-[#4B5563] text-lg">Connecting Indian talent with global opportunities since 2014.</p>
  </div>
  </section>
