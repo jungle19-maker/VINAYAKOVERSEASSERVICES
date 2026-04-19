@@ -1,3 +1,5 @@
+import AnimatedHeading from "./AnimatedHeading";
+
 const steps = [
   {
     num: "01",
@@ -33,21 +35,22 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 bg-[#F8FAFC] overflow-hidden">
+    <section id="process" className="py-24 bg-[#ecececfc] overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="h-[2px] w-8 bg-[#F5B301] " />
-            <span className="text-xs font-bold text-[#0B1F3A]/50 uppercase tracking-[0.22em]">
+            <span className="text-xs font-bold text-[#23352b]/50 uppercase tracking-[0.22em]">
               How It Works
             </span>
             <span className="h-[2px] w-8 bg-[#F5B301] " />
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B1F3A] leading-tight mb-4">
-            Our 6-Step Recruitment Process
-          </h2>
+          <AnimatedHeading 
+            text="Our 6-Step Recruitment Process"
+            className="text-4xl md:text-5xl font-extrabold text-[#23352b] leading-tight mb-4"
+          />
           <p className="text-[#4B5563] text-lg leading-relaxed">
             A proven, structured timeline approach to deliver the right talent at the right time —
             every single time.
@@ -56,9 +59,9 @@ export default function Process() {
 
         {/* Vertical Alternating Timeline Grid */}
         <div className="relative w-full py-4">
-          
+
           {/* Center Vertical Line */}
-          <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[2px] bg-[#E5E7EB] md:-translate-x-[1px]" />
+          <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[2px] bg-[#23352b] md:-translate-x-[1px]" />
 
           <div className="flex flex-col gap-12 md:gap-16">
             {steps.map((step, idx) => {
@@ -71,7 +74,7 @@ export default function Process() {
 
               return (
                 <div key={idx} className="relative w-full">
-                  
+
                   {/* Floating Number Box (Timeline Marker) */}
                   <div className="absolute left-[28px] md:left-1/2 top-4 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10 w-12 h-12 bg-[#0B1F3A] border-2 border-[#F5B301] flex items-center justify-center shadow-lg transition-transform hover:scale-110 duration-300">
                     <span className="text-[#F5B301] font-black text-lg">{step.num}</span>
@@ -80,9 +83,9 @@ export default function Process() {
                   {/* Content Container */}
                   <div className={`w-full md:w-[45%] pl-20 md:pl-0 ${boxMargin}`}>
                     <div className="bg-white border border-[#E5E7EB] p-8 hover:bg-[#0B1F3A] group transition-all duration-400 shadow-sm hover:shadow-2xl hover:-translate-y-1">
-                      
+
                       {/* Step Number Backdrop (Visible on Hover) */}
-                      <div className="text-6xl font-extrabold text-[#F8FAFC] group-hover:text-white/5 absolute top-2 right-4 leading-none select-none transition-colors duration-300 pointer-events-none">
+                      <div className="text-6xl font-extrabold text-[#23352b] group-hover:text-white/5 absolute top-2 right-4 leading-none select-none transition-colors duration-300 pointer-events-none">
                         {step.num}
                       </div>
 

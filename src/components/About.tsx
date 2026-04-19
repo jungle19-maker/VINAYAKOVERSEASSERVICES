@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { CheckCircle2, Award, Globe, Factory } from "lucide-react";
+import AnimatedHeading from "./AnimatedHeading";
 
 const points = [
   "Validated & verified candidates with thorough background checks",
   "Transparent, compliant processes aligned with Govt. of India",
-  "Rapid deployment turnaround — shortlisting in 48–72 hours",
-  "Pan-India talent pool across metros and tier-2/3 cities",
   "End-to-end visa, attestation & emigration clearance support",
   "Post-deployment onboarding and relationship management",
 ];
@@ -40,7 +39,7 @@ export default function About({ showCertificate = true }: { showCertificate?: bo
               {statBadges.map((badge, i) => (
                 <div
                   key={i}
-                  className="flex-1 bg-white text-[#0B1F3A] p-2 sm:p-4 shadow-[0_10px_30px_rgba(11,31,58,0.1)] text-center border border-[#E5E7EB]"
+                  className="flex-1 bg-white text-[#24342b] p-2 sm:p-4 shadow-[0_10px_30px_rgba(11,31,58,0.1)] text-center border border-[#E5E7EB]"
                 >
                   <div className="flex justify-center text-[#F5B301] mb-1">{badge.icon}</div>
                   <div className="text-lg sm:text-2xl font-extrabold text-[#F5B301]">{badge.value}</div>
@@ -59,22 +58,22 @@ export default function About({ showCertificate = true }: { showCertificate?: bo
           <div className="lg:w-1/2 space-y-8 pt-6 lg:pt-0">
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-8 bg-[#F5B301] " />
-              <span className="text-xs font-bold text-[#0B1F3A]/50 uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider">
                 About Us
               </span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#0B1F3A] leading-tight">
-              A Trusted International{" "}
-              <span className="text-[#F5B301]">Recruitment Partner.</span>
-            </h2>
+            <AnimatedHeading 
+              text="A Trusted International [Recruitment Partner.]"
+              className="text-[#24342b] text-4xl lg:text-5xl font-bold leading-tight"
+            />
 
             <p className="text-[#4B5563] leading-relaxed text-lg">
               VCS Website is a trusted international recruitment partner, delivering
               skilled manpower solutions across industries including construction, oil & gas,
               healthcare, hospitality, and manufacturing. With a strong compliance framework
               aligned with Government of India regulations, we ensure{" "}
-              <strong className="text-[#0B1F3A]">ethical, transparent, and efficient hiring</strong>{" "}
+              <strong className="text-[#24342b]">ethical, transparent, and efficient hiring</strong>{" "}
               for employers worldwide.
             </p>
 
@@ -106,11 +105,11 @@ export default function About({ showCertificate = true }: { showCertificate?: bo
               <div className="md:w-1/3">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="h-[2px] w-8 bg-[#F5B301] " />
-                  <span className="text-xs font-bold text-[#0B1F3A]/50 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider">
                     Govt. Approved
                   </span>
                 </div>
-                <h3 className="text-3xl font-bold text-[#0B1F3A] mb-4">
+                <h3 className="text-3xl font-bold text-[#24342b] mb-4">
                   Official <span className="text-[#F5B301]">License</span>
                 </h3>
                 <p className="text-[#4B5563] text-sm leading-relaxed mb-6">
@@ -118,7 +117,7 @@ export default function About({ showCertificate = true }: { showCertificate?: bo
                 </p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F1F5F9] border border-[#E5E7EB]">
                   <Award className="w-5 h-5 text-[#F5B301]" />
-                  <span className="text-sm font-bold text-[#0B1F3A]">B-3393/HP/PER/100/5/11399/2026</span>
+                  <span className="text-sm font-bold text-[#24342b]">B-3393/HP/PER/100/5/11399/2026</span>
                 </div>
               </div>
               <div className="md:w-2/3">

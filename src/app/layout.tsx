@@ -65,7 +65,8 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/images/logo.jpeg',
+    apple: '/images/logo.jpeg',
   },
 };
 
@@ -113,7 +114,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#F8FAFC] text-slate-800`}
+        suppressHydrationWarning
+        className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#24342b] text-slate-800`}
       >
         {children}
       </body>

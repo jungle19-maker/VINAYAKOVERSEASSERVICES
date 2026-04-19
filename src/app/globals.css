@@ -307,9 +307,13 @@
 
 html,
 body {
-  top: 0px !important;
-  margin-top: 0px !important;
   position: static !important;
+}
+
+/* Adjust the fixed header when Google Translate is active to prevent overlap */
+html.translated-ltr header.fixed,
+html.translated-rtl header.fixed {
+  top: 40px !important;
 }
 
 .goog-tooltip {
@@ -341,7 +345,7 @@ select.goog-te-combo {
   background-color: #F8FAFC !important;
   border: 1px solid #E5E7EB !important;
   color: #0B1F3A !important;
-  padding: 6px 30px 6px 12px !important;
+  padding: 6px 0px 6px 12px !important;
   font-size: 13px !important;
   font-weight: 600 !important;
   outline: none !important;
