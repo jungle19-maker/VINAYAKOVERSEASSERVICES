@@ -5,9 +5,9 @@ import Requirements from "@/components/Requirements";
 
 export const metadata: Metadata = {
   title:
-    "Job Requirements & Eligibility | Overseas Recruitment Una Himachal Pradesh | VCS",
+    "Job Requirements & Eligibility | Overseas Recruitment Una Himachal Pradesh | VOS",
   description:
-    "Check eligibility requirements for overseas jobs from Una, HP. VCS is the top foreign job consultant in Una, Himachal Pradesh — offering Canada PR, Germany nursing, Dubai jobs, UK nursing, driver jobs abroad & construction work visas. Serving Hamirpur, Kangra & near Chandigarh road.",
+    "Check eligibility requirements for overseas jobs from Una, HP. VOS is the top foreign job consultant in Una, Himachal Pradesh — offering Canada PR, Germany nursing, Dubai jobs, UK nursing, driver jobs abroad & construction work visas. Serving Hamirpur, Kangra & near Chandigarh road.",
   keywords: [
     "overseas recruitment in Una",
     "foreign job consultants Una Himachal",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "visa eligibility criteria India",
   ],
   openGraph: {
-    title: "Job Requirements for Overseas Recruitment | VCS Una, HP",
+    title: "Job Requirements for Overseas Recruitment | VOS Una, HP",
     description:
       "Find out the eligibility and document requirements for nursing jobs UK, Canada PR, Germany jobs, Dubai jobs & more — from Una, Himachal Pradesh.",
     url: "https://www.vinayakoverseasservices.com/requirements",
@@ -43,13 +43,14 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://www.vinayakoverseasservices.com/#localbusiness",
-  name: "Vinayak Overseas Services (VCS)",
+  name: "Vinayak Overseas Services (VOS)",
   image: "https://www.vinayakoverseasservices.com/images/logo.jpeg",
   description:
-    "VCS is the leading overseas recruitment consultancy in Una, Himachal Pradesh offering visa assistance, Canada PR, Germany nursing, Dubai jobs, UK nursing, and abroad placement services for candidates from Una, Hamirpur, Kangra, and near Chandigarh road.",
+    "VOS is the leading overseas recruitment consultancy in Una, Himachal Pradesh offering visa assistance, Canada PR, Germany nursing, Dubai jobs, UK nursing, and abroad placement services for candidates from Una, Hamirpur, Kangra, and near Chandigarh road.",
   url: "https://www.vinayakoverseasservices.com",
   telephone: "+91-8894412776",
   email: "vinayakoverseas90@gmail.com",
+
   address: {
     "@type": "PostalAddress",
     streetAddress: "Shop No 5, Ground & First Floor, Old Hoshiarpur Road",
@@ -121,14 +122,14 @@ export default function RequirementsPage() {
             }}
           />
           <div className="container mx-auto px-6 max-w-4xl relative z-10">
-            
+
 
             <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">
               Job <span className="text-[#F5B301]">Requirements</span>
             </h1>
-            
 
-           
+
+
           </div>
         </section>
 

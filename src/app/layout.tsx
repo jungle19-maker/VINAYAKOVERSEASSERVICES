@@ -20,11 +20,11 @@ const BASE_URL = 'https://www.vinayakoverseasservices.com';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'VCS Website | MEA Approved Global Manpower Recruitment',
-    template: '%s | VCS Website',
+    default: 'Vinayak Overseas Services | MEA Approved Global Manpower Recruitment',
+    template: '%s | VOS',
   },
   description:
-    'VCS Website is an MEA-approved, Government of India licensed overseas manpower recruitment agency. We connect skilled Indian professionals with trusted international employers across Gulf, Middle East, Asia & Europe.',
+    'Vinayak Overseas Services is an MEA-approved, Government of India licensed overseas manpower recruitment agency. We connect skilled Indian professionals with trusted international employers across Gulf, Middle East, Asia & Europe.',
   keywords: [
     'overseas recruitment India',
     'manpower agency India',
@@ -32,7 +32,8 @@ export const metadata: Metadata = {
     'overseas jobs India',
     'gulf recruitment agency',
     'international manpower consultancy',
-    'VCS Website',
+    'Vinayak Overseas Services',
+    'VOS',
     'overseas staffing India',
     // Local Una / HP SEO keywords
     'overseas recruitment in Una',
@@ -53,8 +54,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: BASE_URL,
-    siteName: 'VCS Website',
-    title: 'VCS Website | MEA Approved Global Manpower Recruitment',
+    siteName: 'Vinayak Overseas Services',
+    title: 'Vinayak Overseas Services | MEA Approved Global Manpower Recruitment',
     description:
       'Connecting skilled Indian talent with trusted international employers. MEA Registered | 100% Legal Recruitment | Global Placements.',
     images: [
@@ -62,13 +63,13 @@ export const metadata: Metadata = {
         url: '/images/hero_city_buildings.png',
         width: 1200,
         height: 630,
-        alt: 'VCS Website — Global Recruitment',
+        alt: 'VOS — Global Recruitment',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VCS Website | Global Manpower Recruitment',
+    title: 'VOS | Global Manpower Recruitment',
     description:
       'MEA approved overseas recruitment agency. Connecting skilled Indian professionals with global employers.',
     images: ['/images/hero_city_buildings.png'],
@@ -96,7 +97,7 @@ const organizationSchema = {
   '@type': ['Organization', 'LocalBusiness'],
   '@id': `${BASE_URL}/#organization`,
   name: 'Vinayak Overseas Services',
-  alternateName: ['VCS', 'VCS Website', 'Aadrash Manpower'],
+  alternateName: ['VOS', 'Aadrash Manpower'],
   url: BASE_URL,
   logo: {
     '@type': 'ImageObject',

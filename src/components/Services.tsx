@@ -74,7 +74,7 @@ export default function Services() {
                 "url": `https://www.vinayakoverseasservices.com${svc.href}`,
                 "provider": {
                     "@type": "Organization",
-                    "name": "VCS Website"
+                    "name": "VOS"
                 }
             }
         }))
@@ -97,7 +97,7 @@ export default function Services() {
                         </span>
                         <span className="h-[2px] w-8 bg-[#F5B301] " />
                     </div>
-                    <AnimatedHeading 
+                    <AnimatedHeading
                         text="Global Manpower Services Across Key Industries"
                         className="text-4xl md:text-5xl font-extrabold text-[#23352b] leading-tight mb-6"
                     />
