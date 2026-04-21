@@ -81,8 +81,11 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* ── Social Icons Sidebar ── */}
-                <div className="hidden md:flex absolute right-0 top-[50%] -translate-y-1/2 flex-col z-[100]">
+
+            </section>
+
+            {/* ── Social Icons Sidebar (Fixed) ── */}
+            <div className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col z-[200]">
                     <a
                         href="https://facebook.com"
                         target="_blank" rel="noreferrer"
@@ -92,12 +95,12 @@ export default function Hero() {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="w-5 h-5 md:w-6 md:h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
                     </a>
                     <a
-                        href="https://twitter.com"
+                        href="https://x.com/vinayakoverseas"
                         target="_blank" rel="noreferrer"
-                        aria-label="Twitter / X"
+                        aria-label="X (formerly Twitter)"
                         className="w-10 h-10 md:w-12 md:h-12 bg-[#23352b] border border-[#F5B301]/40 flex items-center justify-center text-[#F5B301] hover:bg-[#F5B301] hover:text-[#23352b] hover:-translate-x-1 transition-all duration-200 mb-[2px]"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="w-5 h-5 md:w-6 md:h-6"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="w-5 h-5 md:w-6 md:h-6"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L2.25 2.25h6.938l4.26 5.632 5.797-6.632Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
                     <a
                         href="https://instagram.com"
@@ -115,10 +118,7 @@ export default function Hero() {
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="w-5 h-5 md:w-6 md:h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
                     </a>
-                </div>
-
-
-            </section>
+            </div>
 
             {/* ── PREMIUM STATS BAR ── */}
             <div id="stats" className="bg-[#0B1F3A] py-16 relative overflow-hidden">
