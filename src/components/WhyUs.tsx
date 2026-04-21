@@ -166,7 +166,7 @@ export default function WhyUs() {
                             </div>
 
                             <AnimatedHeading 
-                                text={`About Khushi Ram\n[Founder and CEO]`}
+                                text={`About\n[Founder and CEO]`}
                                 className="text-3xl lg:text-4xl font-bold text-[#23352b] leading-tight"
                             />
 
