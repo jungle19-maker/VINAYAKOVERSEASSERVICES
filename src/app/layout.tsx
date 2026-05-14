@@ -114,6 +114,7 @@ const organizationSchema = {
     addressRegion: 'Himachal Pradesh',
     postalCode: '174303',
     addressCountry: 'IN',
+    
   },
   geo: {
     '@type': 'GeoCoordinates',
