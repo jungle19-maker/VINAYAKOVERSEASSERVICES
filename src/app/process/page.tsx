@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 const BASE_URL = 'https://www.vinayakoverseasservices.com';
 
 export const metadata: Metadata = {
-  title: 'Our 6-Step Recruitment Process | MEA-Approved Overseas Hiring | VCS',
+  title: 'Our 6-Step Recruitment Process | MEA-Approved Overseas Hiring | VOS',
   description:
-    'Learn how VCS Una recruits skilled manpower overseas in 6 transparent steps — from requirement analysis and candidate sourcing to visa processing and final deployment.',
+    'Learn how VOS Una recruits skilled manpower overseas in 6 transparent steps — from requirement analysis and candidate sourcing to visa processing and final deployment.',
   keywords: [
     'overseas recruitment process India',
     'how to get overseas job Una HP',
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/process`,
   },
   openGraph: {
-    title: 'Our 6-Step Overseas Recruitment Process | VCS — Una, HP',
+    title: 'Our 6-Step Overseas Recruitment Process | VOS — Una, HP',
     description:
-      'Transparent 6-step process from job order to final deployment. See how VCS Una ensures legal, ethical, fast overseas placements.',
+      'Transparent 6-step process from job order to final deployment. See how VOS Una ensures legal, ethical, fast overseas placements.',
     url: `${BASE_URL}/process`,
-    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VCS Recruitment Process' }],
+    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VOS Recruitment Process' }],
     type: 'website',
     siteName: 'Vinayak Overseas Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '6-Step Overseas Recruitment Process | VCS Una HP',
+    title: '6-Step Overseas Recruitment Process | VOS Una HP',
     description: 'Transparent, legal overseas recruitment in 6 steps from Una, HP.',
     images: ['/images/hero_city_buildings.png'],
   },

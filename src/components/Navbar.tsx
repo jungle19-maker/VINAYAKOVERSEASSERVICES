@@ -69,7 +69,7 @@ export default function Navbar() {
             <a href="/" className="flex flex-shrink-0 items-center justify-center border border-gray-200">
               <Image
                 src="/images/logo.jpeg"
-                alt="VCS"
+                alt="VOS"
                 width={100}
                 height={44}
                 className="object-contain h-12 w-auto"

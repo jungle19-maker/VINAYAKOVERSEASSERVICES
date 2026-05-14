@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 const BASE_URL = 'https://www.vinayakoverseasservices.com';
 
 export const metadata: Metadata = {
-  title: 'Overseas Recruitment Services | Skilled, Healthcare, IT & Oil & Gas Staffing | VCS',
+  title: 'Overseas Recruitment Services | Skilled, Healthcare, IT & Oil & Gas Staffing | VOS',
   description:
-    'VCS provides MEA-approved overseas staffing across healthcare, skilled trades, IT, hospitality, oil & gas, and construction. Serving employers worldwide from Una, Himachal Pradesh.',
+    'VOS provides MEA-approved overseas staffing across healthcare, skilled trades, IT, hospitality, oil & gas, and construction. Serving employers worldwide from Una, Himachal Pradesh.',
   keywords: [
     'overseas recruitment services India',
     'international manpower agency',
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/services`,
   },
   openGraph: {
-    title: 'Overseas Recruitment Services | VCS — Una, Himachal Pradesh',
+    title: 'Overseas Recruitment Services | VOS — Una, Himachal Pradesh',
     description:
       'Skilled manpower for healthcare, IT, oil & gas, hospitality, and construction sectors. MEA-approved overseas recruitment from Una, HP.',
     url: `${BASE_URL}/services`,
-    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VCS Services' }],
+    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VOS Services' }],
     type: 'website',
     siteName: 'Vinayak Overseas Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Overseas Recruitment Services | VCS Una HP',
+    title: 'Overseas Recruitment Services | VOS Una HP',
     description: 'MEA-approved staffing for healthcare, IT, oil & gas & more.',
     images: ['/images/hero_city_buildings.png'],
   },

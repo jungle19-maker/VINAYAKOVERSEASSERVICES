@@ -69,7 +69,7 @@ export default function WhyUs() {
                             <span className="h-[2px] w-8 bg-[#F5B301] " />
                         </div>
                         <AnimatedHeading 
-                            text="Why Partner With VCS Website?"
+                            text="Why Partner With VOS Website?"
                             className="text-4xl md:text-5xl font-extrabold text-[#23352b] mb-6 leading-tight"
                         />
                         <p className="text-[#4B5563] text-lg max-w-2xl mx-auto leading-relaxed">

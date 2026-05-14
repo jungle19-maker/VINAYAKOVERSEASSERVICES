@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 const BASE_URL = 'https://www.vinayakoverseasservices.com';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Overseas Recruitment Agency Una HP | VCS',
+  title: 'Contact Us | Overseas Recruitment Agency Una HP | VOS',
   description:
-    'Contact Vinayak Overseas Services (VCS) in Una, Himachal Pradesh. Get in touch for overseas job placement, visa consultancy, Canada PR, Germany nursing, Dubai jobs & more. Call: +91-8894412776.',
+    'Contact Vinayak Overseas Services (VOS) in Una, Himachal Pradesh. Get in touch for overseas job placement, visa consultancy, Canada PR, Germany nursing, Dubai jobs & more. Call: +91-8894412776.',
   keywords: [
     'contact overseas recruitment Una',
     'foreign job consultant Una Himachal',
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/contact-info`,
   },
   openGraph: {
-    title: 'Contact VCS | Overseas Recruitment Una, Himachal Pradesh',
+    title: 'Contact VOS | Overseas Recruitment Una, Himachal Pradesh',
     description:
-      'Reach out to VCS — Una\'s top overseas recruitment agency. Office: Shop No 5, Old Hoshiarpur Road, Una, HP 174303.',
+      'Reach out to VOS — Una\'s top overseas recruitment agency. Office: Shop No 5, Old Hoshiarpur Road, Una, HP 174303.',
     url: `${BASE_URL}/contact-info`,
-    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'Contact VCS' }],
+    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'Contact VOS' }],
     type: 'website',
     siteName: 'Vinayak Overseas Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact VCS | Overseas Recruitment Agency Una HP',
+    title: 'Contact VOS | Overseas Recruitment Agency Una HP',
     description: 'Get in touch for overseas jobs, visa & Canada PR — Una, HP.',
     images: ['/images/hero_city_buildings.png'],
   },

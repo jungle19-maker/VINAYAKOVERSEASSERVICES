@@ -310,7 +310,7 @@ export default function Requirements() {
             <AlertCircle className="w-5 h-5 text-[#F5B301] flex-shrink-0 mt-0.5" />
             <p className="text-sm text-[#374151]">
               <strong className="text-[#24342b]">Note:</strong> Document requirements may vary by destination country and
-              job category. Our team at VCS, Una (Himachal Pradesh) will provide a personalised checklist once you
+              job category. Our team at VOS, Una (Himachal Pradesh) will provide a personalised checklist once you
               register with us. Visit our office at <strong>Old Hoshiarpur Road, Una, HP</strong> or call{" "}
               <a href="tel:+918894412776" className="text-[#24342b] font-bold underline">
                 +91 88944 12776

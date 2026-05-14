@@ -31,7 +31,7 @@ export default function Footer() {
  <div className="space-y-6 lg:col-span-1">
  <Image
  src="/images/logo.jpeg"
- alt="VCS Website"
+ alt="VOS Website"
  width={200}
  height={60}
  className="bg-white/95 p-2 "
