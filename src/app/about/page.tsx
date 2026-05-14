@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 // import Requirements from "@/components/Requirements";
 
 export const metadata: Metadata = {
-    title: 'About Us | Foreign Job Consultants Una HP | Vinayak Overseas Services',
-    description: 'Vinayak Overseas Services(VOS) is the leading overseas recruitment agency in Una, Himachal Pradesh. Specializing in Canada PR, Germany nursing, Dubai jobs, UK nursing, driver jobs abroad & construction visas. Serving Hamirpur, Kangra & near Chandigarh road.',
+    title: 'About Us | Foreign Job Consultants Una HP | VOS Overseas Services',
+    description: 'VOS (Vinayak Overseas Services) is the leading overseas recruitment agency in Una, Himachal Pradesh. Specializing in Canada PR, Germany nursing, Dubai jobs, UK nursing, driver jobs abroad & construction visas. Serving Hamirpur, Kangra & near Chandigarh road.',
     keywords: [
         'overseas recruitment in Una',
         'foreign job consultants Una Himachal',
@@ -41,7 +41,7 @@ export default function AboutPage() {
                         }}
                     />
                     <div className="container mx-auto px-6 max-w-4xl relative z-10">
-                        <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">About <span className="text-[#F5B301]">Vinayak Overseas Services</span></h1>
+                        <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">About <span className="text-[#F5B301]">VOS Website</span></h1>
                     </div>
                 </section>
 

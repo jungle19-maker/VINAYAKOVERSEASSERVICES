@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   FileText,
   User,
@@ -13,123 +13,91 @@ import {
   CheckCircle2,
   AlertCircle,
   MapPin,
+  HeartPulse, 
+  HardHat, 
+  Car, 
+  Plane, 
+  GraduationCap, 
+  Building2, 
+  Stethoscope, 
+  HelpCircle, 
+  Settings
 } from "lucide-react";
 import AnimatedHeading from "./AnimatedHeading";
 
-const jobCategories = [
-  {
-    id: "nursing",
-    icon: <Heart className="w-6 h-6" />,
-    title: "Nursing & Healthcare",
-    destinations: ["UK", "Germany", "Gulf Countries", "Canada"],
-    roles: ["Staff Nurse", "Caregiver", "Medical Lab Technician", "Paramedic"],
-    requirements: [
-      "B.Sc Nursing / GNM / ANM qualification",
-      "Valid nursing council registration (INC/State)",
-      "Minimum 1–2 years clinical experience",
-      "IELTS / OET score (for UK, Canada, Germany)",
-      "Valid Indian passport (min. 2 years validity)",
-      "Medical fitness certificate",
-    ],
-    highlight: "Nursing jobs in UK from Una HP",
-  },
-  {
-    id: "driver",
-    icon: <Truck className="w-6 h-6" />,
-    title: "Driver & Transport",
-    destinations: ["Dubai", "Saudi Arabia", "Qatar", "Oman"],
-    roles: ["Heavy Vehicle Driver", "Light Vehicle Driver", "Forklift Operator", "Delivery Driver"],
-    requirements: [
-      "Valid Indian driving licence (LMV / HMV)",
-      "Minimum 3 years driving experience",
-      "Clean driving record",
-      "International driving permit (preferred)",
-      "Valid passport with 2+ years validity",
-      "Basic English communication skills",
-    ],
-    highlight: "Driver jobs abroad Una HP",
-  },
-  {
-    id: "construction",
-    icon: <Hammer className="w-6 h-6" />,
-    title: "Construction & Skilled Trades",
-    destinations: ["Dubai", "Saudi Arabia", "Qatar", "Kuwait", "Oman"],
-    roles: ["Mason / Carpenter", "Electrician", "Plumber", "Welder", "Steel Fixer", "Site Supervisor"],
-    requirements: [
-      "ITI / Diploma in relevant trade (preferred)",
-      "Minimum 2 years site experience",
-      "Skill India / NSDC certificate (advantageous)",
-      "Physical fitness & medical clearance",
-      "Valid passport",
-      "No criminal record",
-    ],
-    highlight: "Construction work visa Una",
-  },
-  {
-    id: "canada-pr",
-    icon: <Globe className="w-6 h-6" />,
-    title: "Canada PR & Express Entry",
-    destinations: ["Canada"],
-    roles: ["Skilled Worker PR", "Provincial Nominee Program", "Family Sponsorship", "Study-to-PR Pathway"],
-    requirements: [
-      "Minimum 67 points on CRS (Comprehensive Ranking System)",
-      "IELTS CLB 7+ (Express Entry FSW)",
-      "1+ year skilled work experience (NOC category)",
-      "Educational Credential Assessment (ECA)",
-      "Proof of settlement funds",
-      "Police clearance & medical exam",
-    ],
-    highlight: "Canada PR consultancy Una HP",
-  },
-  {
-    id: "germany",
-    icon: <Briefcase className="w-6 h-6" />,
-    title: "Germany Skilled Worker Visa",
-    destinations: ["Germany"],
-    roles: ["Nurse / Caregiver", "Mechanical Engineer", "IT Professional", "Chef / Cook", "Welder"],
-    requirements: [
-      "Recognized qualification equivalent to German standards",
-      "German language proficiency A2–B2 (Goethe certificate)",
-      "Job offer from German employer (Skilled Immigration Act)",
-      "Credential recognition by German authority",
-      "Valid passport & visa application",
-      "APS certificate (for Indian graduates)",
-    ],
-    highlight: "Germany nursing jobs Una",
-  },
-  {
-    id: "dubai",
-    icon: <MapPin className="w-6 h-6" />,
-    title: "Dubai & Gulf Jobs",
-    destinations: ["Dubai", "Abu Dhabi", "Sharjah", "Riyadh", "Doha"],
-    roles: ["Hospitality Staff", "Security Guard", "Sales Executive", "IT Support", "Admin Staff"],
-    requirements: [
-      "Relevant educational qualification (10th–Degree)",
-      "Prior experience preferred (1–3 years)",
-      "Valid passport with 2+ years validity",
-      "Medical fitness certificate",
-      "Good conduct certificate / police clearance",
-      "Emigration clearance (ECR / ECNR as applicable)",
-    ],
-    highlight: "Dubai job agencies near me Una",
-  },
-];
+type Requirement = {
+  _id: string;
+  title: string;
+  icon: string;
+  countries: string[];
+  shortDescription: string;
+  roles?: string[];
+  eligibilityRequirements?: string[];
+  status: "active" | "inactive";
+  details: string;
+};
 
-const generalDocuments = [
-  { doc: "Valid Indian Passport (min. 2 years validity)", note: "Original + 2 photocopies" },
-  { doc: "Educational Certificates", note: "10th, 12th, Degree, Diploma — attested" },
-  { doc: "Work Experience Letter", note: "From previous employer(s)" },
-  { doc: "Skill / Trade Certificate", note: "ITI, NSDC, Skill India, or equivalent" },
-  { doc: "Medical Fitness Certificate", note: "From GAMCA / approved panel doctor" },
-  { doc: "Police Clearance Certificate (PCC)", note: "From local police / Passport Seva Kendra" },
-  { doc: "Passport-size Photographs", note: "6–8 recent photos (white background)" },
-  { doc: "Aadhaar Card / PAN Card", note: "Government ID proof" },
-  { doc: "Bank Statement (last 3 months)", note: "For Canada, Germany, and PR visa categories" },
-  { doc: "Emigration Clearance (ECR)", note: "For ECR passport holders going to notified countries" },
-];
+type DocumentItem = {
+  _id: string;
+  title: string;
+  description: string;
+  countrySpecificNote: string;
+  status: "active" | "inactive";
+};
+
+type CtaSetting = {
+  heading: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundColor: string;
+  status: "active" | "inactive";
+};
+
+const IconMap = (name: string) => {
+  const icons: Record<string, any> = {
+    HeartPulse, HardHat, Car, Plane, Briefcase, 
+    GraduationCap, Building2, Stethoscope, Hammer, Settings, Truck, Heart, Globe, MapPin
+  };
+  const IconComponent = icons[name] || HelpCircle;
+  return <IconComponent className="w-6 h-6" />;
+};
+
+
 
 export default function Requirements() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [requirements, setRequirements] = useState<Requirement[]>([]);
+  const [documents, setDocuments] = useState<DocumentItem[]>([]);
+  const [cta, setCta] = useState<CtaSetting | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [reqsRes, docsRes, ctaRes] = await Promise.all([
+          fetch("/api/requirements"),
+          fetch("/api/documents"),
+          fetch("/api/cta")
+        ]);
+        
+        const reqsData = await reqsRes.json();
+        const docsData = await docsRes.json();
+        const ctaData = await ctaRes.json();
+        
+        setRequirements(reqsData.filter((req: Requirement) => req.status === "active"));
+        setDocuments(docsData.filter((doc: DocumentItem) => doc.status === "active"));
+        if (ctaData && ctaData.status === "active") {
+          setCta(ctaData);
+        }
+      } catch (error) {
+        console.error("Failed to fetch data");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <section
@@ -182,94 +150,121 @@ export default function Requirements() {
         </div>
 
         {/* Job Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {jobCategories.map((cat) => (
-            <div
-              key={cat.id}
-              className={`bg-white border transition-all duration-300 cursor-pointer group ${activeCategory === cat.id
-                  ? "border-[#F5B301] shadow-xl shadow-[#F5B301]/10"
-                  : "border-[#E5E7EB] hover:border-[#F5B301]/50 hover:shadow-lg"
+        {loading ? (
+          <div className="flex justify-center py-12">
+            <div className="animate-pulse flex space-x-4">
+              <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+              <div className="space-y-3">
+                <div className="h-4 bg-gray-200 rounded w-36"></div>
+                <div className="h-4 bg-gray-200 rounded w-24"></div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {requirements.map((req) => (
+              <div
+                key={req._id}
+                className={`bg-white border transition-all duration-300 cursor-pointer group ${
+                  activeCategory === req._id
+                    ? "border-[#F5B301] shadow-xl shadow-[#F5B301]/10"
+                    : "border-[#E5E7EB] hover:border-[#F5B301]/50 hover:shadow-lg"
                 }`}
-              onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
-              aria-expanded={activeCategory === cat.id}
-            >
-              {/* Card Header */}
-              <div className="p-6 flex items-start justify-between">
-                <div className="flex items-center gap-4">
-                  <div
-                    className={`p-3 transition-colors duration-300 ${activeCategory === cat.id
-                        ? "bg-[#F5B301] text-white"
-                        : "bg-[#F1F5F9] text-[#24342b] group-hover:bg-[#F5B301]/10 group-hover:text-[#24342b]"
+                onClick={() => setActiveCategory(activeCategory === req._id ? null : req._id)}
+                aria-expanded={activeCategory === req._id}
+              >
+                {/* Card Header */}
+                <div className="p-6 flex items-start justify-between">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`p-3 transition-colors duration-300 ${
+                        activeCategory === req._id
+                          ? "bg-[#F5B301] text-white"
+                          : "bg-[#F1F5F9] text-[#24342b] group-hover:bg-[#F5B301]/10 group-hover:text-[#24342b]"
                       }`}
-                  >
-                    {cat.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-[#24342b] text-lg leading-tight">{cat.title}</h3>
-                    <div className="flex flex-wrap gap-1 mt-1">
-                      {cat.destinations.slice(0, 3).map((d) => (
-                        <span
-                          key={d}
-                          className="text-[10px] font-semibold text-[#4B5563] bg-[#F1F5F9] px-2 py-0.5 uppercase tracking-wide"
-                        >
-                          {d}
-                        </span>
-                      ))}
-                      {cat.destinations.length > 3 && (
-                        <span className="text-[10px] font-semibold text-[#4B5563] bg-[#F1F5F9] px-2 py-0.5">
-                          +{cat.destinations.length - 3}
-                        </span>
-                      )}
+                    >
+                      {IconMap(req.icon)}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#24342b] text-lg leading-tight">{req.title}</h3>
+                      <div className="flex flex-wrap gap-1 mt-1">
+                        {req.countries.slice(0, 3).map((d) => (
+                          <span
+                            key={d}
+                            className="text-[10px] font-semibold text-[#4B5563] bg-[#F1F5F9] px-2 py-0.5 uppercase tracking-wide"
+                          >
+                            {d}
+                          </span>
+                        ))}
+                        {req.countries.length > 3 && (
+                          <span className="text-[10px] font-semibold text-[#4B5563] bg-[#F1F5F9] px-2 py-0.5">
+                            +{req.countries.length - 3}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <ChevronDown
-                  className={`w-5 h-5 text-[#24342b]/40 flex-shrink-0 mt-1 transition-transform duration-300 ${activeCategory === cat.id ? "rotate-180 text-[#F5B301]" : ""
+                  <ChevronDown
+                    className={`w-5 h-5 text-[#24342b]/40 flex-shrink-0 mt-1 transition-transform duration-300 ${
+                      activeCategory === req._id ? "rotate-180 text-[#F5B301]" : ""
                     }`}
-                />
-              </div>
-
-              {/* Expandable Requirements */}
-              {activeCategory === cat.id && (
-                <div className="border-t border-[#E5E7EB] px-6 pb-6 pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
-                  {/* Roles */}
-                  <p className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider mb-2">Common Roles</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {cat.roles.map((role) => (
-                      <span
-                        key={role}
-                        className="text-xs bg-[#24342b] text-white px-3 py-1 font-medium"
-                      >
-                        {role}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Requirements */}
-                  <p className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider mb-2 mt-4">
-                    Eligibility Requirements
-                  </p>
-                  <ul className="space-y-2">
-                    {cat.requirements.map((req, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-[#374151]">
-                        <CheckCircle2 className="w-4 h-4 text-[#F5B301] flex-shrink-0 mt-0.5" />
-                        {req}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href="/contact-info"
-                    className="mt-5 inline-block btn-primary text-sm"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Apply Now
-                  </a>
+                  />
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
+
+                {/* Expandable Requirements */}
+                {activeCategory === req._id && (
+                  <div className="border-t border-[#E5E7EB] px-6 pb-6 pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <p className="text-sm font-medium text-[#24342b] mb-4">{req.shortDescription}</p>
+                    
+                    {req.roles && req.roles.length > 0 && (
+                      <>
+                        <p className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider mb-2">Common Roles</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {req.roles.map((role, i) => (
+                            <span key={i} className="text-xs bg-[#24342b] text-white px-3 py-1 font-medium">
+                              {role}
+                            </span>
+                          ))}
+                        </div>
+                      </>
+                    )}
+
+                    {req.eligibilityRequirements && req.eligibilityRequirements.length > 0 && (
+                      <>
+                        <p className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider mb-2 mt-4">
+                          Eligibility Requirements
+                        </p>
+                        <ul className="space-y-2 mb-4">
+                          {req.eligibilityRequirements.map((er, i) => (
+                            <li key={i} className="flex items-start gap-2 text-sm text-[#374151]">
+                              <CheckCircle2 className="w-4 h-4 text-[#F5B301] flex-shrink-0 mt-0.5" />
+                              {er}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+
+                    {req.details && (
+                      <div 
+                        className="prose prose-sm max-w-none prose-green text-[#374151]"
+                        dangerouslySetInnerHTML={{ __html: req.details }}
+                      />
+                    )}
+
+                    <a
+                      href="/contact-info"
+                      className="mt-5 inline-block btn-primary text-sm"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* General Documents Section */}
         <div className="bg-white border border-[#E5E7EB] p-8 md:p-12">
@@ -286,20 +281,28 @@ export default function Requirements() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {generalDocuments.map((item, i) => (
+            {documents.length > 0 ? documents.map((doc, i) => (
               <div
-                key={i}
+                key={doc._id}
                 className="flex items-start gap-3 p-4 bg-[#F8F9FA] border border-[#E5E7EB] hover:border-[#F5B301]/40 transition-colors"
               >
                 <div className="w-7 h-7 bg-[#24342b] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <div>
-                  <p className="font-semibold text-[#24342b] text-sm">{item.doc}</p>
-                  <p className="text-[#6B7280] text-xs mt-0.5">{item.note}</p>
+                  <p className="font-semibold text-[#24342b] text-sm">{doc.title}</p>
+                  <p className="text-[#6B7280] text-xs mt-0.5">{doc.description}</p>
+                  {doc.countrySpecificNote && (
+                    <div className="mt-2 flex items-start gap-1.5 p-2 bg-orange-50 rounded text-xs text-orange-800 border border-orange-100">
+                      <AlertCircle className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
+                      <span>{doc.countrySpecificNote}</span>
+                    </div>
+                  )}
                 </div>
               </div>
-            ))}
+            )) : (
+              <p className="col-span-2 text-sm text-gray-500">No documents found.</p>
+            )}
           </div>
 
           {/* Notice Banner */}
@@ -318,24 +321,26 @@ export default function Requirements() {
         </div>
 
         {/* CTA Strip */}
-        <div className="mt-12 bg-[#24342b] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-2">
-              Ready to Apply? <span className="text-[#F5B301]">We're Here to Help.</span>
-            </h3>
-            <p className="text-white/70 text-sm">
-              Serving candidates from Una, Hamirpur, Kangra, and across Himachal Pradesh &amp; Punjab border.
-            </p>
+        {cta && (
+          <div className={`mt-12 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 ${cta.backgroundColor || 'bg-[#24342b]'}`}>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                {cta.heading}
+              </h3>
+              <p className="text-white/70 text-sm max-w-2xl">
+                {cta.description}
+              </p>
+            </div>
+            <div className="flex gap-4 flex-shrink-0">
+              <a href={cta.buttonLink} className="btn-primary whitespace-nowrap bg-[#F5B301] text-[#24342b] hover:bg-yellow-400">
+                {cta.buttonText}
+              </a>
+              <a href="/services" className="btn-secondary-dark whitespace-nowrap">
+                View Services
+              </a>
+            </div>
           </div>
-          <div className="flex gap-4 flex-shrink-0">
-            <a href="/contact-info" className="btn-primary whitespace-nowrap">
-              Register Now
-            </a>
-            <a href="/services" className="btn-secondary-dark whitespace-nowrap">
-              View Services
-            </a>
-          </div>
-        </div>
+        )}
 
       </div>
     </section>

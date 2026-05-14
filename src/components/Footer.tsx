@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { /* Globe, MessageCircle, Users, Share2, */ MapPin, Mail, Phone, ExternalLink } from "lucide-react";
+import { Globe, MessageCircle, Users, Share2, MapPin, Mail, Phone, ExternalLink } from "lucide-react";
 
 const quickLinks = [
     { name: "Home", href: "#home" },
@@ -27,20 +27,20 @@ export default function Footer() {
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
-                    {/* Brand */}
-                    <div className="space-y-6 lg:col-span-1">
-                        <Image
-                            src="/images/logo.jpeg"
-                            alt="VOS"
-                            width={200}
-                            height={60}
-                            className="bg-white/95 p-2 "
-                        />
-                        <p className="text-white/50 text-sm leading-relaxed">
-                            A trusted MEA-approved overseas recruitment partner delivering skilled manpower
-                            solutions across Gulf, Middle East, Asia & Europe.
-                        </p>
-                        {/* Social icons — hidden for now
+ {/* Brand */}
+ <div className="space-y-6 lg:col-span-1">
+ <Image
+ src="/images/logo.jpeg"
+ alt="VOS Website"
+ width={200}
+ height={60}
+ className="bg-white/95 p-2 "
+ />
+ <p className="text-white/50 text-sm leading-relaxed">
+ A trusted MEA-approved overseas recruitment partner delivering skilled manpower
+ solutions across Gulf, Middle East, Asia & Europe.
+ </p>
+ {/* Social icons */}
  <div className="flex gap-3">
  {[Globe, MessageCircle, Users, Share2].map((Icon, i) => (
  <a
@@ -52,8 +52,7 @@ export default function Footer() {
  </a>
  ))}
  </div>
- */}
-                    </div>
+ </div>
 
                     {/* Quick Links */}
                     <div>

@@ -20,11 +20,11 @@ const BASE_URL = 'https://www.vinayakoverseasservices.com';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Vinayak Overseas Services | MEA Approved Global Manpower Recruitment',
-    template: '%s | VOS',
+    default: 'VOS Website | MEA Approved Global Manpower Recruitment',
+    template: '%s | VOS Website',
   },
   description:
-    'Vinayak Overseas Services is an MEA-approved, Government of India licensed overseas manpower recruitment agency. We connect skilled Indian professionals with trusted international employers across Gulf, Middle East, Asia & Europe.',
+    'VOS Website is an MEA-approved, Government of India licensed overseas manpower recruitment agency. We connect skilled Indian professionals with trusted international employers across Gulf, Middle East, Asia & Europe.',
   keywords: [
     'overseas recruitment India',
     'manpower agency India',
@@ -32,8 +32,7 @@ export const metadata: Metadata = {
     'overseas jobs India',
     'gulf recruitment agency',
     'international manpower consultancy',
-    'Vinayak Overseas Services',
-    'VOS',
+    'VOS Website',
     'overseas staffing India',
     // Local Una / HP SEO keywords
     'overseas recruitment in Una',
@@ -69,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VOS | Global Manpower Recruitment',
+    title: 'VOS Website | Global Manpower Recruitment',
     description:
       'MEA approved overseas recruitment agency. Connecting skilled Indian professionals with global employers.',
     images: ['/images/hero_city_buildings.png'],
@@ -97,7 +96,7 @@ const organizationSchema = {
   '@type': ['Organization', 'LocalBusiness'],
   '@id': `${BASE_URL}/#organization`,
   name: 'Vinayak Overseas Services',
-  alternateName: ['VOS', 'Aadrash Manpower'],
+  alternateName: ['VOS', 'VOS Website', 'Aadrash Manpower'],
   url: BASE_URL,
   logo: {
     '@type': 'ImageObject',
@@ -115,6 +114,7 @@ const organizationSchema = {
     addressRegion: 'Himachal Pradesh',
     postalCode: '174303',
     addressCountry: 'IN',
+    
   },
   geo: {
     '@type': 'GeoCoordinates',
@@ -166,6 +166,8 @@ const websiteSchema = {
   },
 };
 
+import Providers from "@/components/Providers";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -183,7 +185,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
         className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#24342b] text-slate-800`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

@@ -74,7 +74,7 @@ export default function Services() {
                 "url": `https://www.vinayakoverseasservices.com${svc.href}`,
                 "provider": {
                     "@type": "Organization",
-                    "name": "VOS"
+                    "name": "VOS Website"
                 }
             }
         }))
