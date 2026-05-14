@@ -31,6 +31,8 @@ type Requirement = {
   icon: string;
   countries: string[];
   shortDescription: string;
+  roles?: string[];
+  eligibilityRequirements?: string[];
   status: "active" | "inactive";
   details: string;
 };
