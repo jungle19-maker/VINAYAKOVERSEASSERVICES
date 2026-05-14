@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { /* Globe, MessageCircle, Users, Share2, */ MapPin, Mail, Phone, ExternalLink } from "lucide-react";
+import { Globe, MessageCircle, Users, Share2, MapPin, Mail, Phone, ExternalLink } from "lucide-react";
 
 const quickLinks = [
     { name: "Home", href: "#home" },
@@ -52,8 +52,7 @@ export default function Footer() {
  </a>
  ))}
  </div>
- */}
-                    </div>
+ </div>
 
                     {/* Quick Links */}
                     <div>
