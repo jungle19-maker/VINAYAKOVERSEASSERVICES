@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Navbar from "@/components/Navbar";
 import AboutComponent from "@/components/About";
 import Footer from "@/components/Footer";
-import Requirements from "@/components/Requirements";
+// import Requirements from "@/components/Requirements";
 
 export const metadata: Metadata = {
     title: 'About Us | Foreign Job Consultants Una HP | VOS Overseas Services',
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 {/* Hero Banner for About Page */}
                 <section className="hidden md:block relative bg-white py-24 text-center border-b border-[#E5E7EB] overflow-hidden">
                     {/* Modern Grid Background */}
-                    <div 
+                    <div
                         className="absolute inset-0 z-0"
                         style={{
                             backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
@@ -48,8 +48,8 @@ export default function AboutPage() {
                 {/* Re-using the About Component */}
                 <AboutComponent />
 
-                {/* Requirements Section */}
-                <Requirements />
+                {/* Requirements Section — hidden for now */}
+                {/* <Requirements /> */}
 
                 <section className="bg-white py-16">
                     <div className="container mx-auto px-6 max-w-5xl text-center">

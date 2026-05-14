@@ -46,14 +46,14 @@ export default function ProcessPage() {
         {/* Hero Banner for Process Page */}
         <section className="hidden md:block relative bg-white py-24 text-center border-b border-[#E5E7EB] overflow-hidden">
           {/* Modern Grid Background */}
-          <div 
-              className="absolute inset-0 z-0"
-              style={{
-                  backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
-                  backgroundSize: '40px 40px',
-                  maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
-              }}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+              maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
+            }}
           />
           <div className="container mx-auto px-6 max-w-4xl relative z-10">
             <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">Our <span className="text-[#F5B301]">Process</span></h1>

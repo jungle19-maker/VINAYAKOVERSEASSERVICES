@@ -131,22 +131,22 @@ export default function Requirements() {
             text="Job Requirements & [Eligibility Criteria]"
             className="text-[#24342b] text-4xl lg:text-5xl font-bold leading-tight mb-6"
           />
-           {/* Local tags */}
-            <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {[
-                "Una, HP",
-                "Hamirpur",
-                "Kangra",
-                "Near Chandigarh Road",
-              ].map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs bg-[#F1F5F9] border border-[#E5E7EB] text-[#24342b] font-semibold px-3 py-1 uppercase tracking-wide"
-                >
-                  📍 {tag}
-                </span>
-              ))}
-            </div>
+          {/* Local tags */}
+          <div className="flex flex-wrap justify-center gap-2 mt-6">
+            {[
+              "Una, HP",
+              "Hamirpur",
+              "Kangra",
+              "Near Chandigarh Road",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="text-xs bg-[#F1F5F9] border border-[#E5E7EB] text-[#24342b] font-semibold px-3 py-1 uppercase tracking-wide"
+              >
+                📍 {tag}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Job Category Cards */}

@@ -80,12 +80,12 @@ export default function Navbar() {
             <div className="flex items-center flex-shrink-0 gap-1 sm:gap-2">
               <img
                 src="/images/mea_logo.png"
-                alt="Ministry of External Affairs"
+                alt="Approved By Ministry of External Affairs"
                 className="object-contain h-8 sm:h-10 w-auto flex-shrink-0"
               />
               <div className="flex flex-col">
                 <span className="text-[#1e3a8a] font-black text-[9px] sm:text-[14px] leading-tight break-words max-w-[100px] sm:max-w-none">
-                  Ministry of External Affairs
+                  Approved By Ministry of External Affairs
                 </span>
                 <span className="text-[#4B5563] text-[8px] sm:text-[12px] leading-tight">
                   Government of India
