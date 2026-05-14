@@ -166,6 +166,8 @@ const websiteSchema = {
   },
 };
 
+import Providers from "@/components/Providers";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -183,7 +185,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
         className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#24342b] text-slate-800`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
