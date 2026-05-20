@@ -50,6 +50,7 @@ const localBusinessSchema = {
   url: "https://www.vinayakoverseasservices.com",
   telephone: "+91-8894412776",
   email: "vinayakoverseas90@gmail.com",
+
   address: {
     "@type": "PostalAddress",
     streetAddress: "Shop No 5, Ground & First Floor, Old Hoshiarpur Road",
@@ -101,38 +102,6 @@ export default function RequirementsPage() {
       />
       <Navbar />
       <div className="flex-grow">
-
-        {/* Hero Banner */}
-        <section
-          className="hidden md:block relative bg-white py-24 text-center border-b border-[#E5E7EB] overflow-hidden"
-          aria-label="Requirements page header"
-        >
-          {/* Grid Background */}
-          <div
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-              maskImage:
-                "radial-gradient(ellipse at center, black 40%, transparent 80%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse at center, black 40%, transparent 80%)",
-            }}
-          />
-          <div className="container mx-auto px-6 max-w-4xl relative z-10">
-
-
-            <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">
-              Job <span className="text-[#F5B301]">Requirements</span>
-            </h1>
-
-
-
-          </div>
-        </section>
-
-        {/* Requirements Component */}
         <Requirements />
       </div>
       <Footer />

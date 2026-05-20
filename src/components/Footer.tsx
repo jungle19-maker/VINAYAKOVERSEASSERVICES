@@ -27,32 +27,32 @@ export default function Footer() {
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
-                    {/* Brand */}
-                    <div className="space-y-6 lg:col-span-1">
-                        <Image
-                            src="/images/logo.jpeg"
-                            alt="VOS Website"
-                            width={200}
-                            height={60}
-                            className="bg-white/95 p-2 "
-                        />
-                        <p className="text-white/50 text-sm leading-relaxed">
-                            A trusted MEA-approved overseas recruitment partner delivering skilled manpower
-                            solutions across Gulf, Middle East, Asia & Europe.
-                        </p>
-                        {/* Social icons */}
-                        <div className="flex gap-3">
-                            {[Globe, MessageCircle, Users, Share2].map((Icon, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    className="w-9 h-9 bg-white border border-white/10 flex items-center justify-center hover:bg-[#F5B301] hover:text-[#23352b] hover:border-[#F5B301] transition-all"
-                                >
-                                    <Icon className="w-4 h-4" />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
+ {/* Brand */}
+ <div className="space-y-6 lg:col-span-1">
+ <Image
+ src="/images/logo.jpeg"
+ alt="VOS Website"
+ width={200}
+ height={60}
+ className="bg-white/95 p-2 "
+ />
+ <p className="text-white/50 text-sm leading-relaxed">
+ A trusted MEA-approved overseas recruitment partner delivering skilled manpower
+ solutions across Gulf, Middle East, Asia & Europe.
+ </p>
+ {/* Social icons */}
+ <div className="flex gap-3">
+ {[Globe, MessageCircle, Users, Share2].map((Icon, i) => (
+ <a
+ key={i}
+ href="#"
+ className="w-9 h-9 bg-white border border-white/10 flex items-center justify-center hover:bg-[#F5B301] hover:text-[#23352b] hover:border-[#F5B301] transition-all"
+ >
+ <Icon className="w-4 h-4" />
+ </a>
+ ))}
+ </div>
+ </div>
 
                     {/* Quick Links */}
                     <div>

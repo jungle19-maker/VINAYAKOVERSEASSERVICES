@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: BASE_URL,
-    siteName: 'VOS Website',
-    title: 'VOS Website | MEA Approved Global Manpower Recruitment',
+    siteName: 'Vinayak Overseas Services',
+    title: 'Vinayak Overseas Services | MEA Approved Global Manpower Recruitment',
     description:
       'Connecting skilled Indian talent with trusted international employers. MEA Registered | 100% Legal Recruitment | Global Placements.',
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: '/images/hero_city_buildings.png',
         width: 1200,
         height: 630,
-        alt: 'VOS Website — Global Recruitment',
+        alt: 'VOS — Global Recruitment',
       },
     ],
   },
@@ -114,6 +114,7 @@ const organizationSchema = {
     addressRegion: 'Himachal Pradesh',
     postalCode: '174303',
     addressCountry: 'IN',
+    
   },
   geo: {
     '@type': 'GeoCoordinates',
@@ -165,6 +166,8 @@ const websiteSchema = {
   },
 };
 
+import Providers from "@/components/Providers";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -182,7 +185,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
         className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#24342b] text-slate-800`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Navbar from "@/components/Navbar";
 import AboutComponent from "@/components/About";
 import Footer from "@/components/Footer";
-import Requirements from "@/components/Requirements";
+// import Requirements from "@/components/Requirements";
 
 export const metadata: Metadata = {
     title: 'About Us | Foreign Job Consultants Una HP | VOS Overseas Services',
@@ -48,8 +48,8 @@ export default function AboutPage() {
                 {/* Re-using the About Component */}
                 <AboutComponent />
 
-                {/* Requirements Section */}
-                <Requirements />
+                {/* Requirements Section — hidden for now */}
+                {/* <Requirements /> */}
 
                 <section className="bg-white py-16">
                     <div className="container mx-auto px-6 max-w-5xl text-center">
