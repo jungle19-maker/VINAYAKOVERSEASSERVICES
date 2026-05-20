@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 const BASE_URL = 'https://www.vinayakoverseasservices.com';
 
 export const metadata: Metadata = {
-  title: 'Our 6-Step Recruitment Process | MEA-Approved Overseas Hiring | VCS',
+  title: 'Our 6-Step Recruitment Process | MEA-Approved Overseas Hiring | VOS',
   description:
-    'Learn how VCS Una recruits skilled manpower overseas in 6 transparent steps — from requirement analysis and candidate sourcing to visa processing and final deployment.',
+    'Learn how VOS Una recruits skilled manpower overseas in 6 transparent steps — from requirement analysis and candidate sourcing to visa processing and final deployment.',
   keywords: [
     'overseas recruitment process India',
     'how to get overseas job Una HP',
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/process`,
   },
   openGraph: {
-    title: 'Our 6-Step Overseas Recruitment Process | VCS — Una, HP',
+    title: 'Our 6-Step Overseas Recruitment Process | VOS — Una, HP',
     description:
-      'Transparent 6-step process from job order to final deployment. See how VCS Una ensures legal, ethical, fast overseas placements.',
+      'Transparent 6-step process from job order to final deployment. See how VOS Una ensures legal, ethical, fast overseas placements.',
     url: `${BASE_URL}/process`,
-    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VCS Recruitment Process' }],
+    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VOS Recruitment Process' }],
     type: 'website',
     siteName: 'Vinayak Overseas Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '6-Step Overseas Recruitment Process | VCS Una HP',
+    title: '6-Step Overseas Recruitment Process | VOS Una HP',
     description: 'Transparent, legal overseas recruitment in 6 steps from Una, HP.',
     images: ['/images/hero_city_buildings.png'],
   },
@@ -46,14 +46,14 @@ export default function ProcessPage() {
         {/* Hero Banner for Process Page */}
         <section className="hidden md:block relative bg-white py-24 text-center border-b border-[#E5E7EB] overflow-hidden">
           {/* Modern Grid Background */}
-          <div 
-              className="absolute inset-0 z-0"
-              style={{
-                  backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
-                  backgroundSize: '40px 40px',
-                  maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
-              }}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+              maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
+            }}
           />
           <div className="container mx-auto px-6 max-w-4xl relative z-10">
             <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">Our <span className="text-[#F5B301]">Process</span></h1>

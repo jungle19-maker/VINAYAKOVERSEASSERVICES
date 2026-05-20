@@ -163,22 +163,22 @@ export default function Requirements() {
             text="Job Requirements & [Eligibility Criteria]"
             className="text-[#24342b] text-4xl lg:text-5xl font-bold leading-tight mb-6"
           />
-           {/* Local tags */}
-            <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {[
-                "Una, HP",
-                "Hamirpur",
-                "Kangra",
-                "Near Chandigarh Road",
-              ].map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs bg-[#F1F5F9] border border-[#E5E7EB] text-[#24342b] font-semibold px-3 py-1 uppercase tracking-wide"
-                >
-                  📍 {tag}
-                </span>
-              ))}
-            </div>
+          {/* Local tags */}
+          <div className="flex flex-wrap justify-center gap-2 mt-6">
+            {[
+              "Una, HP",
+              "Hamirpur",
+              "Kangra",
+              "Near Chandigarh Road",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="text-xs bg-[#F1F5F9] border border-[#E5E7EB] text-[#24342b] font-semibold px-3 py-1 uppercase tracking-wide"
+              >
+                📍 {tag}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Job Category Cards */}
@@ -186,11 +186,10 @@ export default function Requirements() {
           {jobCategories.map((cat) => (
             <div
               key={cat.id}
-              className={`bg-white border transition-all duration-300 cursor-pointer group ${
-                activeCategory === cat.id
+              className={`bg-white border transition-all duration-300 cursor-pointer group ${activeCategory === cat.id
                   ? "border-[#F5B301] shadow-xl shadow-[#F5B301]/10"
                   : "border-[#E5E7EB] hover:border-[#F5B301]/50 hover:shadow-lg"
-              }`}
+                }`}
               onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
               aria-expanded={activeCategory === cat.id}
             >
@@ -198,11 +197,10 @@ export default function Requirements() {
               <div className="p-6 flex items-start justify-between">
                 <div className="flex items-center gap-4">
                   <div
-                    className={`p-3 transition-colors duration-300 ${
-                      activeCategory === cat.id
+                    className={`p-3 transition-colors duration-300 ${activeCategory === cat.id
                         ? "bg-[#F5B301] text-white"
                         : "bg-[#F1F5F9] text-[#24342b] group-hover:bg-[#F5B301]/10 group-hover:text-[#24342b]"
-                    }`}
+                      }`}
                   >
                     {cat.icon}
                   </div>
@@ -226,9 +224,8 @@ export default function Requirements() {
                   </div>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-[#24342b]/40 flex-shrink-0 mt-1 transition-transform duration-300 ${
-                    activeCategory === cat.id ? "rotate-180 text-[#F5B301]" : ""
-                  }`}
+                  className={`w-5 h-5 text-[#24342b]/40 flex-shrink-0 mt-1 transition-transform duration-300 ${activeCategory === cat.id ? "rotate-180 text-[#F5B301]" : ""
+                    }`}
                 />
               </div>
 
@@ -310,7 +307,7 @@ export default function Requirements() {
             <AlertCircle className="w-5 h-5 text-[#F5B301] flex-shrink-0 mt-0.5" />
             <p className="text-sm text-[#374151]">
               <strong className="text-[#24342b]">Note:</strong> Document requirements may vary by destination country and
-              job category. Our team at VCS, Una (Himachal Pradesh) will provide a personalised checklist once you
+              job category. Our team at VOS, Una (Himachal Pradesh) will provide a personalised checklist once you
               register with us. Visit our office at <strong>Old Hoshiarpur Road, Una, HP</strong> or call{" "}
               <a href="tel:+918894412776" className="text-[#24342b] font-bold underline">
                 +91 88944 12776

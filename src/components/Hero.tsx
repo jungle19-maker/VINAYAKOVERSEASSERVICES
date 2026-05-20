@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, Briefcase, UserCheck, ShieldCheck, Globe, CheckCircle } from "lucide-react";
+import Image from "next/image";
 import AnimatedHeading from "./AnimatedHeading";
 import AnimatedCounter from "./AnimatedCounter";
 
@@ -20,9 +21,14 @@ export default function Hero() {
                 className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden mt-[115px] sm:mt-[120px] lg:mt-[128px]"
             >
                 {/* Background */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: "url('/images/hero_city_buildings.png')" }}
+                <Image
+                    src="/images/hero_city_buildings.png"
+                    alt="City Buildings Background"
+                    fill
+                    priority
+                    quality={85}
+                    className="object-cover object-center"
+                    sizes="100vw"
                 />
 
                 {/* Navy gradient overlay */}

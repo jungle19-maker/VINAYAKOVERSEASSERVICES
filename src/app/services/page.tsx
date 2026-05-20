@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 const BASE_URL = 'https://www.vinayakoverseasservices.com';
 
 export const metadata: Metadata = {
-  title: 'Overseas Recruitment Services | Skilled, Healthcare, IT & Oil & Gas Staffing | VCS',
+  title: 'Overseas Recruitment Services | Skilled, Healthcare, IT & Oil & Gas Staffing | VOS',
   description:
-    'VCS provides MEA-approved overseas staffing across healthcare, skilled trades, IT, hospitality, oil & gas, and construction. Serving employers worldwide from Una, Himachal Pradesh.',
+    'VOS provides MEA-approved overseas staffing across healthcare, skilled trades, IT, hospitality, oil & gas, and construction. Serving employers worldwide from Una, Himachal Pradesh.',
   keywords: [
     'overseas recruitment services India',
     'international manpower agency',
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/services`,
   },
   openGraph: {
-    title: 'Overseas Recruitment Services | VCS — Una, Himachal Pradesh',
+    title: 'Overseas Recruitment Services | VOS — Una, Himachal Pradesh',
     description:
       'Skilled manpower for healthcare, IT, oil & gas, hospitality, and construction sectors. MEA-approved overseas recruitment from Una, HP.',
     url: `${BASE_URL}/services`,
-    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VCS Services' }],
+    images: [{ url: '/images/hero_city_buildings.png', width: 1200, height: 630, alt: 'VOS Services' }],
     type: 'website',
     siteName: 'Vinayak Overseas Services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Overseas Recruitment Services | VCS Una HP',
+    title: 'Overseas Recruitment Services | VOS Una HP',
     description: 'MEA-approved staffing for healthcare, IT, oil & gas & more.',
     images: ['/images/hero_city_buildings.png'],
   },
@@ -49,14 +49,14 @@ export default function ServicesPage() {
         {/* Hero Banner for Services Page */}
         <section className="hidden md:block relative bg-white py-24 text-center border-b border-[#E5E7EB] overflow-hidden">
           {/* Modern Grid Background */}
-          <div 
-              className="absolute inset-0 z-0"
-              style={{
-                  backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
-                  backgroundSize: '40px 40px',
-                  maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
-              }}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+              maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
+            }}
           />
           <div className="container mx-auto px-6 max-w-4xl relative z-10">
             <h1 className="text-4xl md:text-5xl font-extrabold text-[#24342b] mb-4">Our <span className="text-[#F5B301]">Services</span></h1>
