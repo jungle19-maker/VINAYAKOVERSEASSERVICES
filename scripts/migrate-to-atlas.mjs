@@ -7,8 +7,8 @@
 
 import { MongoClient } from "mongodb";
 
-const LOCAL_URI  = "mongodb://localhost:27017/vos-requirements";
-const ATLAS_URI  = "mongodb+srv://junglecartoon19_db_user:swap@40123@cluster0.mongodb.net/vos?retryWrites=true&w=majority";
+const LOCAL_URI  = "mongodb://127.0.0.1:27017/vos-requirements";
+const ATLAS_URI  = "mongodb+srv://junglecartoon19_db_user:KrTHjmMYXPiiu02b@cluster0.2lyafxu.mongodb.net/vos?retryWrites=true&w=majority";
 
 // Target database name on Atlas
 const ATLAS_DB_NAME = "vos";
