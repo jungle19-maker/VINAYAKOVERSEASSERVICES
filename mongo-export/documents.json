@@ -1,0 +1,112 @@
+[
+  {
+    "_id": "6a05b77d328649d9d97eb113",
+    "title": "Valid Indian Passport (min. 2 years validity)",
+    "description": "Original + 2 photocopies",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:29.446Z",
+    "updatedAt": "2026-05-14T11:52:29.446Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b77f328649d9d97eb114",
+    "title": "Educational Certificates",
+    "description": "10th, 12th, Degree, Diploma — attested",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:31.094Z",
+    "updatedAt": "2026-05-14T11:52:31.094Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b780328649d9d97eb115",
+    "title": "Work Experience Letter",
+    "description": "From previous employer(s)",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:32.601Z",
+    "updatedAt": "2026-05-14T11:52:32.601Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b782328649d9d97eb116",
+    "title": "Skill / Trade Certificate",
+    "description": "ITI, NSDC, Skill India, or equivalent",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:34.465Z",
+    "updatedAt": "2026-05-14T11:52:34.465Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b783328649d9d97eb117",
+    "title": "Medical Fitness Certificate",
+    "description": "From GAMCA / approved panel doctor",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:35.700Z",
+    "updatedAt": "2026-05-14T11:52:35.700Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b785328649d9d97eb118",
+    "title": "Police Clearance Certificate (PCC)",
+    "description": "From local police / Passport Seva Kendra",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:37.060Z",
+    "updatedAt": "2026-05-14T11:52:37.060Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b786328649d9d97eb119",
+    "title": "Passport-size Photographs",
+    "description": "6–8 recent photos (white background)",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:38.336Z",
+    "updatedAt": "2026-05-14T11:52:38.336Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b787328649d9d97eb11a",
+    "title": "Aadhaar Card / PAN Card",
+    "description": "Government ID proof",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:39.565Z",
+    "updatedAt": "2026-05-14T11:52:39.565Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b788328649d9d97eb11b",
+    "title": "Bank Statement (last 3 months)",
+    "description": "For Canada, Germany, and PR visa categories",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:40.414Z",
+    "updatedAt": "2026-05-14T11:52:40.414Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b789328649d9d97eb11c",
+    "title": "Emigration Clearance (ECR)",
+    "description": "For ECR passport holders going to notified countries",
+    "priorityNumber": 0,
+    "countrySpecificNote": "",
+    "status": "active",
+    "createdAt": "2026-05-14T11:52:41.892Z",
+    "updatedAt": "2026-05-14T11:52:41.892Z",
+    "__v": 0
+  }
+]

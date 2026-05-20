@@ -78,7 +78,7 @@ export default function Navbar() {
             </a>
             {/* <div className="w-[1px] h-8 sm:h-10 bg-gray-200 mx-1" /> */}
             <div className="flex items-center flex-shrink-0 gap-1 sm:gap-2">
-              <img
+              <Image
                 src="/images/mea_logo.png"
                 alt="Approved By Ministry of External Affairs"
                 className="object-contain h-8 sm:h-10 w-auto flex-shrink-0"

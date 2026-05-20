@@ -1,0 +1,106 @@
+[
+  {
+    "_id": "6a05b771328649d9d97eb10d",
+    "title": "Nursing & Healthcare",
+    "icon": "Heart",
+    "countries": [
+      "UK",
+      "Germany",
+      "Gulf Countries",
+      "Canada"
+    ],
+    "shortDescription": "Nursing jobs in UK from Una HP",
+    "status": "active",
+    "orderNumber": 1,
+    "details": "<p></p>",
+    "createdAt": "2026-05-14T11:52:17.943Z",
+    "updatedAt": "2026-05-14T11:52:17.943Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b773328649d9d97eb10e",
+    "title": "Driver & Transport",
+    "icon": "Truck",
+    "countries": [
+      "Dubai",
+      "Saudi Arabia",
+      "Qatar",
+      "Oman"
+    ],
+    "shortDescription": "Driver jobs abroad Una HP",
+    "status": "active",
+    "orderNumber": 2,
+    "details": "<p></p>",
+    "createdAt": "2026-05-14T11:52:19.883Z",
+    "updatedAt": "2026-05-14T11:52:19.883Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b775328649d9d97eb10f",
+    "title": "Construction & Skilled Trades",
+    "icon": "Hammer",
+    "countries": [
+      "Dubai",
+      "Saudi Arabia",
+      "Qatar",
+      "Kuwait",
+      "Oman"
+    ],
+    "shortDescription": "Construction work visa Una",
+    "status": "active",
+    "orderNumber": 3,
+    "details": "<p></p>",
+    "createdAt": "2026-05-14T11:52:21.389Z",
+    "updatedAt": "2026-05-14T11:52:21.389Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b777328649d9d97eb110",
+    "title": "Canada PR & Express Entry",
+    "icon": "Globe",
+    "countries": [
+      "Canada"
+    ],
+    "shortDescription": "Canada PR consultancy Una HP",
+    "status": "active",
+    "orderNumber": 4,
+    "details": "<p></p>",
+    "createdAt": "2026-05-14T11:52:23.465Z",
+    "updatedAt": "2026-05-14T11:52:23.465Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b779328649d9d97eb111",
+    "title": "Germany Skilled Worker Visa",
+    "icon": "Briefcase",
+    "countries": [
+      "Germany"
+    ],
+    "shortDescription": "Germany nursing jobs Una",
+    "status": "active",
+    "orderNumber": 5,
+    "details": "<p></p>",
+    "createdAt": "2026-05-14T11:52:25.767Z",
+    "updatedAt": "2026-05-14T11:52:25.767Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a05b77b328649d9d97eb112",
+    "title": "Dubai & Gulf Jobs",
+    "icon": "MapPin",
+    "countries": [
+      "Dubai",
+      "Abu Dhabi",
+      "Sharjah",
+      "Riyadh",
+      "Doha"
+    ],
+    "shortDescription": "Dubai job agencies near me Una",
+    "status": "active",
+    "orderNumber": 6,
+    "details": "<p></p>",
+    "createdAt": "2026-05-14T11:52:27.743Z",
+    "updatedAt": "2026-05-14T11:52:27.743Z",
+    "__v": 0
+  }
+]
