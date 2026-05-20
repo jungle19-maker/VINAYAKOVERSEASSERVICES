@@ -81,6 +81,8 @@ export default function Navbar() {
               <Image
                 src="/images/mea_logo.png"
                 alt="Approved By Ministry of External Affairs"
+                width={40}
+                height={40}
                 className="object-contain h-8 sm:h-10 w-auto flex-shrink-0"
               />
               <div className="flex flex-col">
