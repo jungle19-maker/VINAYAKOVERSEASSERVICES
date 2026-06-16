@@ -8,7 +8,7 @@ export async function GET() {
   try {
     await connectToDatabase();
     // Assuming we only ever have one active CTA setting, or we take the first one
-    const cta = await CtaSetting.findOne().sort({ createdAt: -1 });
+    const cta = await CtaSetting.findOne();
     return NextResponse.json(cta || {});
   } catch (error) {
     return NextResponse.json({ message: "Failed to fetch CTA settings" }, { status: 500 });

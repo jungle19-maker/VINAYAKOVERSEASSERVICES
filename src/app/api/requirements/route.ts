@@ -7,7 +7,7 @@ import Requirement from "@/models/Requirement";
 export async function GET() {
   try {
     await connectToDatabase();
-    const requirements = await Requirement.find().sort({ orderNumber: 1, createdAt: -1 });
+    const requirements = await Requirement.find();
     return NextResponse.json(requirements);
   } catch (error) {
     return NextResponse.json({ message: "Failed to fetch requirements" }, { status: 500 });
