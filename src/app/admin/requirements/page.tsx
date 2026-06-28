@@ -39,7 +39,11 @@ export default function AdminRequirements() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  const { register, handleSubmit, reset, setValue } = useForm<Requirement>();
+  const { register, handleSubmit, reset, setValue } = useForm<Requirement>({
+    defaultValues: {
+      details: "<p></p>"
+    }
+  });
 
   const fetchRequirements = async () => {
     try {
@@ -457,7 +461,7 @@ export default function AdminRequirements() {
               </div>
 
               <div>
-                <label className="block text-[10px] font-black uppercase tracking-wider text-slate-500 mb-2">Detailed Web Content (HTML/Rich-Text formatting)</label>
+                <label className="block text-[10px] font-black uppercase tracking-wider text-slate-500 mb-2">Detailed Web Content</label>
                 <textarea 
                   {...register("details")} 
                   className="w-full p-3 bg-slate-50 border border-slate-200/80 rounded-none focus:ring-2 focus:ring-[#24342b] focus:border-transparent outline-none transition-all resize-none font-mono text-xs text-slate-800 shadow-inner" 

@@ -13,14 +13,14 @@ import {
   CheckCircle2,
   AlertCircle,
   MapPin,
-  HeartPulse, 
-  HardHat, 
-  Car, 
-  Plane, 
-  GraduationCap, 
-  Building2, 
-  Stethoscope, 
-  HelpCircle, 
+  HeartPulse,
+  HardHat,
+  Car,
+  Plane,
+  GraduationCap,
+  Building2,
+  Stethoscope,
+  HelpCircle,
   Settings
 } from "lucide-react";
 import AnimatedHeading from "./AnimatedHeading";
@@ -56,7 +56,7 @@ type CtaSetting = {
 
 const IconMap = (name: string) => {
   const icons: Record<string, any> = {
-    HeartPulse, HardHat, Car, Plane, Briefcase, 
+    HeartPulse, HardHat, Car, Plane, Briefcase,
     GraduationCap, Building2, Stethoscope, Hammer, Settings, Truck, Heart, Globe, MapPin
   };
   const IconComponent = icons[name] || HelpCircle;
@@ -80,11 +80,11 @@ export default function Requirements() {
           fetch("/api/documents"),
           fetch("/api/cta")
         ]);
-        
+
         const reqsData = await reqsRes.json();
         const docsData = await docsRes.json();
         const ctaData = await ctaRes.json();
-        
+
         setRequirements(reqsData.filter((req: Requirement) => req.status === "active"));
         setDocuments(docsData.filter((doc: DocumentItem) => doc.status === "active"));
         if (ctaData && ctaData.status === "active") {
@@ -165,11 +165,10 @@ export default function Requirements() {
             {requirements.map((req) => (
               <div
                 key={req._id}
-                className={`bg-white border transition-all duration-300 cursor-pointer group ${
-                  activeCategory === req._id
-                    ? "border-[#F5B301] shadow-xl shadow-[#F5B301]/10"
-                    : "border-[#E5E7EB] hover:border-[#F5B301]/50 hover:shadow-lg"
-                }`}
+                className={`bg-white border transition-all duration-300 cursor-pointer group ${activeCategory === req._id
+                  ? "border-[#F5B301] shadow-xl shadow-[#F5B301]/10"
+                  : "border-[#E5E7EB] hover:border-[#F5B301]/50 hover:shadow-lg"
+                  }`}
                 onClick={() => setActiveCategory(activeCategory === req._id ? null : req._id)}
                 aria-expanded={activeCategory === req._id}
               >
@@ -177,11 +176,10 @@ export default function Requirements() {
                 <div className="p-6 flex items-start justify-between">
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 transition-colors duration-300 ${
-                        activeCategory === req._id
-                          ? "bg-[#F5B301] text-white"
-                          : "bg-[#F1F5F9] text-[#24342b] group-hover:bg-[#F5B301]/10 group-hover:text-[#24342b]"
-                      }`}
+                      className={`p-3 transition-colors duration-300 ${activeCategory === req._id
+                        ? "bg-[#F5B301] text-white"
+                        : "bg-[#F1F5F9] text-[#24342b] group-hover:bg-[#F5B301]/10 group-hover:text-[#24342b]"
+                        }`}
                     >
                       {IconMap(req.icon)}
                     </div>
@@ -205,9 +203,8 @@ export default function Requirements() {
                     </div>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#24342b]/40 flex-shrink-0 mt-1 transition-transform duration-300 ${
-                      activeCategory === req._id ? "rotate-180 text-[#F5B301]" : ""
-                    }`}
+                    className={`w-5 h-5 text-[#24342b]/40 flex-shrink-0 mt-1 transition-transform duration-300 ${activeCategory === req._id ? "rotate-180 text-[#F5B301]" : ""
+                      }`}
                   />
                 </div>
 
@@ -215,7 +212,7 @@ export default function Requirements() {
                 {activeCategory === req._id && (
                   <div className="border-t border-[#E5E7EB] px-6 pb-6 pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
                     <p className="text-sm font-medium text-[#24342b] mb-4">{req.shortDescription}</p>
-                    
+
                     {req.roles && req.roles.length > 0 && (
                       <>
                         <p className="text-xs font-bold text-[#24342b]/50 uppercase tracking-wider mb-2">Common Roles</p>
@@ -246,8 +243,8 @@ export default function Requirements() {
                     )}
 
                     {req.details && (
-                      <div 
-                        className="prose prose-sm max-w-none prose-green text-[#374151]"
+                      <div
+                        className="prose prose-sm max-w-none prose-green text-[#374151] text-xs prose-p:text-xs"
                         dangerouslySetInnerHTML={{ __html: req.details }}
                       />
                     )}

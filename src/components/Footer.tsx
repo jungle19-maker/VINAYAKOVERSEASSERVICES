@@ -27,32 +27,32 @@ export default function Footer() {
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
- {/* Brand */}
- <div className="space-y-6 lg:col-span-1">
- <Image
- src="/images/logo.jpeg"
- alt="VOS Website"
- width={200}
- height={60}
- className="bg-white/95 p-2 "
- />
- <p className="text-white/50 text-sm leading-relaxed">
- A trusted MEA-approved overseas recruitment partner delivering skilled manpower
- solutions across Gulf, Middle East, Asia & Europe.
- </p>
- {/* Social icons */}
- <div className="flex gap-3">
- {[Globe, MessageCircle, Users, Share2].map((Icon, i) => (
- <a
- key={i}
- href="#"
- className="w-9 h-9 bg-white border border-white/10 flex items-center justify-center hover:bg-[#F5B301] hover:text-[#23352b] hover:border-[#F5B301] transition-all"
- >
- <Icon className="w-4 h-4" />
- </a>
- ))}
- </div>
- </div>
+                    {/* Brand */}
+                    <div className="space-y-6 lg:col-span-1">
+                        <Image
+                            src="/images/logo.jpeg"
+                            alt="VOS Website"
+                            width={200}
+                            height={60}
+                            className="bg-white/95 p-2 "
+                        />
+                        <p className="text-white/50 text-sm leading-relaxed">
+                            A trusted MEA-approved overseas recruitment partner delivering skilled manpower
+                            solutions across Gulf, Middle East, Asia & Europe.
+                        </p>
+                        {/* Social icons */}
+                        <div className="flex gap-3">
+                            {[Globe, MessageCircle, Users, Share2].map((Icon, i) => (
+                                <a
+                                    key={i}
+                                    href="#"
+                                    className="w-9 h-9 bg-white border border-white/10 flex items-center justify-center hover:bg-[#F5B301] hover:text-[#23352b] hover:border-[#F5B301] transition-all"
+                                >
+                                    <Icon className="w-4 h-4" />
+                                </a>
+                            ))}
+                        </div>
+                    </div>
 
                     {/* Quick Links */}
                     <div>
@@ -133,9 +133,15 @@ export default function Footer() {
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-white/35">
                         &copy; 2026{" "}
-                        <strong ><a className="text-white/60" href="https://snine.online">SNINEFUTURE</a></strong>. All Rights Reserved.
+                        <strong ><a className="text-white/60" href="#">SNINEFUTURE</a></strong>. All Rights Reserved.
                     </p>
                     <div className="flex items-center gap-3">
+                        <a
+                            href="/admin"
+                            className="flex items-center gap-2 text-xs text-white/50 bg-white/5 hover:bg-[#F5B301] hover:text-[#061428] px-4 py-2 border border-white/10 transition-all font-semibold"
+                        >
+                            Admin Login
+                        </a>
                         <div className="flex items-center gap-2 text-xs text-white/35 bg-white/5 px-4 py-2 border border-white/10">
                             <span className="w-2 h-2 bg-[#F5B301] animate-pulse" />
                             RA License: B-3393/HP/PER/100/5/11399/2026
