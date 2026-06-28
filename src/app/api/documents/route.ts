@@ -7,7 +7,7 @@ import DocumentModel from "@/models/Document";
 export async function GET() {
   try {
     await connectToDatabase();
-    const documents = await DocumentModel.find().sort({ priorityNumber: 1, createdAt: -1 });
+    const documents = await DocumentModel.find();
     return NextResponse.json(documents);
   } catch (error) {
     return NextResponse.json({ message: "Failed to fetch documents" }, { status: 500 });
